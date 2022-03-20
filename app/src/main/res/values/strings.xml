@@ -41,19 +41,21 @@
 
     //Citizen portal - Register Step 1
 
-    <string name="citizen_first_name">First Name</string>
-    <string name="citizen_last_name">Last Name</string>
-    <string name="citizen_birthday">Birthday</string>
-    <string name="citizen_gender">Gender</string>
+    <string name="citizen_reg_first_name">First Name</string>
+    <string name="citizen_reg_last_name">Last Name</string>
+    <string name="citizen_reg_birthday">Birthday</string>
+    <string name="citizen_reg_gender">Gender</string>
+    <string name="citizen_reg_password">Password</string>
+    <string name="citizen_reg_re_password">Password re-type</string>
 
     //Citizen portal - Register Step 2
 
-    <string name="citizen_email">Email</string>
-    <string name="citizen_contact_no">Contact No</string>
-    <string name="citizen_province">Province</string>
-    <string name="citizen_district">District</string>
-    <string name="citizen_address_line_1">Address Line 1</string>
-    <string name="citizen_address_line_2">Address Line 2</string>
+    <string name="citizen_reg_email">Email</string>
+    <string name="citizen_reg_contact_no">Contact No</string>
+    <string name="citizen_reg_province">Province</string>
+    <string name="citizen_reg_district">District</string>
+    <string name="citizen_reg_address_line_1">Address Line 1</string>
+    <string name="citizen_reg_address_line_2">Address Line 2</string>
 
     //Citizen portal - side navigation
 
