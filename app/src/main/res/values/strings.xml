@@ -1,3 +1,280 @@
 <resources>
     <string name="app_name">Divamp</string>
+
+    // Splash Screen
+    <string name="splash_title_line_1">DIGITIZED</string>
+    <string name="splash_title_line_2">VACCINATION</string>
+    <string name="splash_title_line_3">MANAGEMENT</string>
+    <string name="splash_title_line_4">PLATFORM</string>
+
+    // Portal Naviagtion
+    <string name="portal_nav_title_line_1">PORTAL</string>
+    <string name="portal_nav_title_line_2">NAVIGATION</string>
+    <string name="portal_nav_citizen_label">Citizen Portal</string>
+    <string name="portal_nav_vaccine_center_label">Vaccination Center Portal</string>
+    <string name="portal_nav_location_label">Location Portal</string>
+    <string name="portal_nav_admin_label">Health Administration Portal</string>
+
+    /////////////////////////////////////// Citizen ////////////////////////////////////////
+
+    //Citizen portal - common
+
+    <string name="citizen_title_line_1">Citizen</string>
+    <string name="citizen_title_line_2">Portal</string>
+    <string name="citizen_self_registration">Registration</string>
+    <string name="citizen_bio_details">Bio Details</string>
+    <string name="citizen_contact_details">Contact Details</string>
+    <string name="citizen_finish">Finish</string>
+    <string name="citizen_next">Next</string>
+    <string name="citizen_back">Back</string>
+    <string name="citizen_login_now">Login Now</string>
+
+
+    //Citizen portal - login
+
+    <string name="citizen_login">Login</string>
+    <string name="citizen_nic">NIC</string>
+    <string name="citizen_password">Password</string>
+    <string name="citizen_login_btn">Login</string>
+    <string name="citizen_login_reg_divider">Or</string>
+    <string name="citizen_register_btn">Register</string>
+
+    //Citizen portal - Register Step 1
+
+    <string name="citizen_first_name">First Name</string>
+    <string name="citizen_last_name">Last Name</string>
+    <string name="citizen_birthday">Birthday</string>
+    <string name="citizen_gender">Gender</string>
+
+    //Citizen portal - Register Step 2
+
+    <string name="citizen_email">Email</string>
+    <string name="citizen_contact_no">Contact No</string>
+    <string name="citizen_province">Province</string>
+    <string name="citizen_district">District</string>
+    <string name="citizen_address_line_1">Address Line 1</string>
+    <string name="citizen_address_line_2">Address Line 2</string>
+
+    //Citizen portal - side navigation
+
+    <string name="citizen_side_nav_home">Home</string>
+    <string name="citizen_side_nav_status">Status</string>
+    <string name="citizen_side_nav_alert_notification">Alert Notifications</string>
+    <string name="citizen_side_nav_qr_code">QR Code</string>
+
+
+    //Citizen portal - Home
+    <string name="citizen_home_title">Home</string>
+    <string name="citizen_home_age">Age :</string>
+    <string name="citizen_home_last_vaccinated_date">Last Vaccinated Date :</string>
+    <string name="citizen_home_status">Current Status :</string>
+    <string name="citizen_home_list_title">Vaccine List</string>
+    <string name="citizen_home_batch_id">Batch ID :</string>
+    <string name="citizen_home_vaccinated_date">Vaccinated Date :</string>
+
+    //Citizen portal - Status
+
+    <string name="citizen_status_mark_infected">Mark as Infected</string>
+    <string name="citizen_status_mark_healthy">Mark as Healthy</string>
+    <string name="citizen_status_marked_date">marked Date :</string>
+    <string name="citizen_status_marked_time">marked Time :</string>
+
+    //Citizen portal - Alert
+
+    <string name="citizen_alert_infected_reported">Infection Reported</string>
+    <string name="citizen_alert_location">Location :</string>
+    <string name="citizen_alert_reported_date">Reported Date :</string>
+    <string name="citizen_alert_reported_time">Reported Time :</string>
+
+    //Citizen portal - QR Code
+
+    <string name="citizen_qr_code_title">QR Code</string>
+    <string name="citizen_qr_code_instructions">Show the QR code to the Vaccination Center</string>
+
+
+
+    /////////////////////////////////////// Vaccination Center ////////////////////////////////////////
+
+    //Vaccination Center portal - common
+
+    <string name="vac_center_title_line_1">Vaccination Center</string>
+    <string name="vac_center_title_line_">Portal</string>
+    <string name="vac_center_step_1_title">Scan QR &amp; Detect patient</string>
+    <string name="vac_center_step_2_title">Enter vaccine data &amp; verify</string>
+    <string name="vac_center_nic">NIC</string>
+    <string name="vac_center_next">Next</string>
+    <string name="vac_center_detected_patient">Detect Patient</string>
+    <string name="vac_center_step_2_age">Age :</string>
+    <string name="vac_center_step_2_last_vaccinated_date">Last Vaccinated Date :</string>
+    <string name="vac_center_step_2_status">Current Status :</string>
+    <string name="vac_center_step_2_batch_id">Batch ID</string>
+    <string name="vac_center_step_2_vaccine_name">Vaccine Name</string>
+    <string name="vac_center_reject">Reject</string>
+    <string name="vac_center_finish">Finish</string>
+
+    //Vaccination Center portal - login
+
+    <string name="vac_center_login">Login</string>
+    <string name="vac_center_id">Center ID</string>
+    <string name="vac_center_password">Password</string>
+    <string name="vac_center_login_btn">Login</string>
+
+    //Vaccination Center - side navigation
+
+    <string name="vac_center_side_nav_vaccination">Vaccination</string>
+
+
+    //////////////////////////////////////////// Location /////////////////////////////////////////////////////////
+
+    //Location portal - common
+
+    <string name="location_title_line_1">Location</string>
+    <string name="location_title_line_2">Portal</string>
+    <string name="location_self_reg">Self Registration</string>
+    <string name="location_location_details">Location Details</string>
+    <string name="location_contact_details">Contact Details</string>
+    <string name="location_finish">Finish</string>
+    <string name="location_next">Next</string>
+    <string name="location_back">Back</string>
+    <string name="location_login_now">Login Now</string>
+
+
+    //Location portal - login
+
+    <string name="location_login">Login</string>
+    <string name="location_email">Email</string>
+    <string name="location_password">Password</string>
+    <string name="location_login_btn">Login</string>
+    <string name="location_login_reg_divider">Or</string>
+    <string name="location_register_btn">Register</string>
+
+    //Location portal - Register Step 1
+
+    <string name="location_reg_email">Email</string>
+    <string name="location_reg_location_name">Location Name</string>
+    <string name="location_reg_category">Category</string>
+    <string name="location_reg_address_line_1">Address Line 1</string>
+    <string name="location_reg_address_line_2">Address Line 2</string>
+    <string name="location_reg_password">Password</string>
+    <string name="location_reg_re_password">Password re-type</string>
+
+    //Location portal - Register Step 2
+
+    <string name="location_reg_owner_nic">Owner NIC</string>
+    <string name="location_reg_owner_name">Owner Full Name</string>
+    <string name="location_reg_owner_contact">Contact No</string>
+    <string name="location_reg_owner_email">Email</string>
+
+    //Location portal  - side navigation
+
+    <string name="location_side_nav_home">Home</string>
+    <string name="location_side_nav_alert_notifications">Alert Notifications</string>
+    <string name="location_qr_code">Home</string>
+
+
+    //Location portal - Home
+    <string name="location_home_title">Home</string>
+    <string name="location_home_customer_history">Customer History</string>
+    <string name="location_home_nic">NIC - </string>
+    <string name="location_home_date_time">Date &amp; Time -</string>
+
+    //Location portal - Alert
+
+    <string name="location_alert_top_title">Alert Notification</string>
+    <string name="location_alert_infected_reported">Infection Reported</string>
+    <string name="location_alert_username">User :</string>
+    <string name="location_alert_contact">Contact No :</string>
+    <string name="location_alert_visited_datetime">Visited Date/Time :</string>
+    <string name="location_alert_reported_date">Reported Date :</string>
+    <string name="location_alert_reported_time">Reported Time :</string>
+
+
+    //Location portal - QR Code
+
+    <string name="location_qr_code_title">QR Code</string>
+    <string name="location_qr_code_instructions">Show the QR code to the Vaccination Center</string>
+    <string name="location_create_pdf">Create PDF</string>
+
+
+
+    //////////////////////////////  Health Administrator /////////////////////////////////
+
+    //Health Administrator portal - common
+
+    <string name="health_admin_title_line_1">Health Administrator</string>
+    <string name="health_admin_title_line_">Portal</string>
+    <string name="health_admin_search_nic">NIC</string>
+    <string name="health_admin_result_age">Age :</string>
+    <string name="health_admin_result_last_vaccinated_date">Last Vaccinated Date :</string>
+    <string name="health_admin_result_age_status">Current Status :</string>
+    <string name="health_admin_mark_as_infected_btn">Mark as Infected</string>
+
+    <string name="health_admin_vacc_center_reg">Vaccine Center Registration</string>
+    <string name="health_admin_vacc_center_details">Center Details</string>
+    <string name="health_admin_vacc_incharge_details">Incharge Details</string>
+    <string name="health_admin_vacc_finish">Finish</string>
+    <string name="health_admin_vacc_next">Next</string>
+    <string name="health_admin_vacc_add_another">Add Another</string>
+
+
+    //Health Administrator portal - login
+
+    <string name="health_admin_login">Login</string>
+    <string name="health_admin_email">Email</string>
+    <string name="health_admin_password">Password</string>
+    <string name="health_admin_login_btn">Login</string>
+
+    //Health Administrator  - side navigation
+
+    <string name="health_admin_side_nav_home">Home</string>
+    <string name="health_admin_side_nav_mark_infections">Mark Infections</string>
+    <string name="health_admin_side_nav_indi_history">Individual History</string>
+    <string name="health_admin_side_nav_vac_center_reg">Vaccination Center Registration</string>
+
+    //Health Administrator  - Home
+
+    <string name="health_admin_home_vac_summery">Vaccination Summery</string>
+    <string name="health_admin_home_total_vac_count">Total Vaccinated Count</string>
+    <string name="health_admin_home_total_vac_1st_dose">1st Dose Only</string>
+    <string name="health_admin_home_total_vac_2nd_dose">Up to 2nd Dose</string>
+    <string name="health_admin_home_total_vac_3nd_dose">Up to 3nd Dose</string>
+    <string name="health_admin_home_infected_summery">Infected Summery</string>
+    <string name="health_admin_home_infected_total">Total Infected Count </string>
+    <string name="health_admin_home_infected_current">Currently Infected Count</string>
+    <string name="health_admin_home_recovered">Total Recovered Count</string>
+    <string name="health_admin_home_vacc_centers">Vaccination Centers</string>
+    <string name="health_admin_home_centers_count">Total Centers count</string>
+
+
+    //Health Administrator  - Mark Infection
+
+    <string name="health_admin_history">History</string>
+    <string name="health_admin_history_marked_date">Marked Date :</string>
+    <string name="health_admin_history_marked_time">Marked Time :</string>
+
+    //Health Administrator  - Individual History
+
+
+    <string name="health_admin_indi_history_marked_date">Marked Date :</string>
+    <string name="health_admin_indi_history_marked_time">Marked Time :</string>
+
+
+    //Health Administrator - Register Step 1
+
+    <string name="admin_vacc_center_reg_email">Email</string>
+    <string name="admin_vacc_center_name">Center Name</string>
+    <string name="admin_vacc_center_reg_province">Province</string>
+    <string name="admin_vacc_center_reg_District">District</string>
+    <string name="admin_vacc_center_reg_password">Password</string>
+    <string name="admin_vacc_center_reg_re_password">Password re-type</string>
+
+    //Health Administrator - Register Step 2
+
+    <string name="admin_vacc_center_incharge_nicl">Incharge NIC</string>
+    <string name="admin_vacc_center_incharge_name">Incharge Full Name</string>
+    <string name="admin_vacc_center_incharge_contact">Contact No</string>
+    <string name="admin_vacc_center_incharge_email">Email</string>
+
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 </resources>
