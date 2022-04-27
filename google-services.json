@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "583276827638",
+    "project_id": "divamp-d6e11",
+    "storage_bucket": "divamp-d6e11.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:583276827638:android:ecb804d1c378768648edd7",
+        "android_client_info": {
+          "package_name": "com.mad.divamp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "583276827638-r9p5rqhvo3i133eaiqus0cv7ofqvo88e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDaZwluV7F5TBfsElkrwzmJDDNoL6cDK5s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "583276827638-r9p5rqhvo3i133eaiqus0cv7ofqvo88e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
