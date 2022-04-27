@@ -1,4 +1,4 @@
-package com.example.divamp;
+package com.mad.divamp;
 
 import android.content.Context;
 

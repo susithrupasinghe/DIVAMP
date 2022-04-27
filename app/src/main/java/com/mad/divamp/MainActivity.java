@@ -1,4 +1,4 @@
-package com.example.divamp;
+package com.mad.divamp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
