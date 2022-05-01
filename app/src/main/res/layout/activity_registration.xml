@@ -4,21 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ic_registration_background"
+    android:background="@drawable/ic_login_background"
     tools:context=".location.Registration">
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="268dp"
+        android:background="@drawable/ic_email"
+        android:ems="10"
+        android:fontFamily="@font/abhaya_libre_extrabold"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="30dp"
+        android:text="E-mail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView11"
         android:layout_width="233dp"
         android:layout_height="34dp"
-        android:layout_marginStart="92dp"
-        android:layout_marginTop="204dp"
-        android:layout_marginEnd="92dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="156dp"
         android:fontFamily="@font/yantramanav_bold"
         android:text="Self Registration"
         android:textColor="#000000"
         android:textSize="34sp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -27,79 +40,135 @@
         android:layout_width="93dp"
         android:layout_height="41dp"
         android:layout_marginStart="152dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="84dp"
         android:fontFamily="@font/yantramanav_bold"
         android:text="Portal"
         android:textColor="#F26421"
         android:textSize="34sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView9"
         android:layout_width="175dp"
         android:layout_height="61dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="32dp"
         android:fontFamily="@font/yantramanav_bold"
         android:text="Location"
         android:textColor="#FFFFFF"
         android:textSize="48sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.457"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress2"
-        android:layout_width="303dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="312dp"
-        android:background="@drawable/ic_registration_email"
-        android:ems="10"
-        android:foreground="@drawable/ic_registration_email"
-        android:hint="@string/Registration_email"
-        android:inputType="textEmailAddress"
-        android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/editTextTextPersonName4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="4dp"
-        android:background="@drawable/ic_location_name"
-        android:ems="10"
-
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress2" />
-
-    <EditText
-        android:id="@+id/editTextTextPassword2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="88dp"
-        android:ems="10"
-        android:inputType="textPassword"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="626dp" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName3"
-        android:layout_width="295dp"
-        android:layout_height="37dp"
         android:layout_marginStart="60dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/ic_registration_category"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/ic_registration_text"
         android:ems="10"
-        android:foreground="@drawable/ic_registration_category"
+        android:fontFamily="@font/abhaya_libre_extrabold"
         android:inputType="textPersonName"
-        android:minHeight="40dp"
-        android:text="@string/Category"
+        android:paddingLeft="30dp"
+        android:text="Location Name"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress4" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/ic_registration_text"
+        android:ems="10"
+        android:fontFamily="@font/abhaya_libre_extrabold"
+        android:inputType="textPersonName"
+        android:paddingLeft="30dp"
+        android:text="Address Line 1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName6" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/ic_registration_text"
+        android:ems="10"
+        android:fontFamily="@font/abhaya_libre_extrabold"
+        android:inputType="textPersonName"
+        android:paddingLeft="30dp"
+        android:text="Address Line 2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName8" />
+
+    <EditText
+        android:id="@+id/editTextTextPassword3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/ic_password"
+        android:ems="10"
+        android:fontFamily="@font/abhaya_libre_extrabold"
+        android:hint="@string/Password"
+        android:inputType="textPassword"
+        android:minHeight="38dp"
+        android:paddingLeft="30dp"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName7" />
+
+    <EditText
+        android:id="@+id/editTextTextPassword4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/ic_password"
+        android:ems="10"
+        android:fontFamily="@font/abhaya_libre_extrabold"
+        android:hint="@string/Password"
+        android:inputType="textPassword"
+        android:minHeight="38dp"
+        android:paddingLeft="30dp"
+        android:text="@string/PasswordReType"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword3" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/ic_registration_text"
+        android:ems="10"
+        android:fontFamily="@font/abhaya_libre_extrabold"
+        android:inputType="textPersonName"
+        android:paddingLeft="30dp"
+        android:text="Category"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="184dp"
+        android:layout_marginTop="556dp"
+        android:background="@drawable/ic_next_btn"
+        android:foreground="@drawable/ic_next_btn"
+        android:text="Button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

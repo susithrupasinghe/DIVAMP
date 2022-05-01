@@ -285,6 +285,7 @@
     <string name="Location_name">Location Name</string>
     <string name="Category">Category</string>
     <string name="Registration_category">Category</string>
+    <string name="PasswordReType">Password re-type</string>
 
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
