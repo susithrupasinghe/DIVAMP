@@ -1,5 +1,6 @@
 package com.mad.divamp.location;
 
+import com.mad.divamp.R;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;

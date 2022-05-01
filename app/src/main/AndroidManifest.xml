@@ -11,15 +11,17 @@
         android:theme="@style/Theme.Divamp">
         <activity
             android:name=".location.Registration_2"
-            android:exported="false" />
+            android:exported="true">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>/>
+        </activity>
         <activity
             android:name=".location.Registration"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".location.logIn"

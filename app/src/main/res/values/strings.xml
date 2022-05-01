@@ -286,6 +286,9 @@
     <string name="Category">Category</string>
     <string name="Registration_category">Category</string>
     <string name="PasswordReType">Password re-type</string>
+    <string name="Owner_NIC">Owner NIC</string>
+    <string name="Owner_full_name">Owner Full Name</string>
+    <string name="Phone_number">Phone Number</string>
 
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
