@@ -280,6 +280,11 @@
     <string name="password" />
     <string name="Email">E-mail</string>
     <string name="Regiter">Regiter</string>
+    <string name="Registration_email">Email</string>
+    <string name="Registraion_passwors">Password</string>
+    <string name="Location_name">Location Name</string>
+    <string name="Category">Category</string>
+    <string name="Registration_category">Category</string>
 
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
