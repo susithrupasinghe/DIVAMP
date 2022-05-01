@@ -94,8 +94,8 @@
     <string name="citizen_qr_code_instructions">Show the QR code to the Vaccination Center</string>
 
 
-
-    /////////////////////////////////////// Vaccination Center ////////////////////////////////////////
+    /////////////////////////////////////// Vaccination Center
+    ////////////////////////////////////////
 
     //Vaccination Center portal - common
 
@@ -126,7 +126,8 @@
     <string name="vac_center_side_nav_vaccination">Vaccination</string>
 
 
-    //////////////////////////////////////////// Location /////////////////////////////////////////////////////////
+    //////////////////////////////////////////// Location
+    /////////////////////////////////////////////////////////
 
     //Location portal - common
 
@@ -167,7 +168,7 @@
     <string name="location_reg_owner_contact">Contact No</string>
     <string name="location_reg_owner_email">Email</string>
 
-    //Location portal  - side navigation
+    //Location portal - side navigation
 
     <string name="location_side_nav_home">Home</string>
     <string name="location_side_nav_alert_notifications">Alert Notifications</string>
@@ -198,8 +199,7 @@
     <string name="location_create_pdf">Create PDF</string>
 
 
-
-    //////////////////////////////  Health Administrator /////////////////////////////////
+    ////////////////////////////// Health Administrator /////////////////////////////////
 
     //Health Administrator portal - common
 
@@ -226,14 +226,14 @@
     <string name="health_admin_password">Password</string>
     <string name="health_admin_login_btn">Login</string>
 
-    //Health Administrator  - side navigation
+    //Health Administrator - side navigation
 
     <string name="health_admin_side_nav_home">Home</string>
     <string name="health_admin_side_nav_mark_infections">Mark Infections</string>
     <string name="health_admin_side_nav_indi_history">Individual History</string>
     <string name="health_admin_side_nav_vac_center_reg">Vaccination Center Registration</string>
 
-    //Health Administrator  - Home
+    //Health Administrator - Home
 
     <string name="health_admin_home_vac_summery">Vaccination Summery</string>
     <string name="health_admin_home_total_vac_count">Total Vaccinated Count</string>
@@ -248,13 +248,13 @@
     <string name="health_admin_home_centers_count">Total Centers count</string>
 
 
-    //Health Administrator  - Mark Infection
+    //Health Administrator - Mark Infection
 
     <string name="health_admin_history">History</string>
     <string name="health_admin_history_marked_date">Marked Date :</string>
     <string name="health_admin_history_marked_time">Marked Time :</string>
 
-    //Health Administrator  - Individual History
+    //Health Administrator - Individual History
 
 
     <string name="health_admin_indi_history_marked_date">Marked Date :</string>
@@ -276,6 +276,10 @@
     <string name="admin_vacc_center_incharge_name">Incharge Full Name</string>
     <string name="admin_vacc_center_incharge_contact">Contact No</string>
     <string name="admin_vacc_center_incharge_email">Email</string>
+    <string name="Password">Password</string>
+    <string name="password" />
+    <string name="Email">E-mail</string>
+    <string name="Regiter">Regiter</string>
 
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
