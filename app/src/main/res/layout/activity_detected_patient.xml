@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".center.Detected_patient"
     android:background="@drawable/ic_detected_patient"
-    >
+    tools:context=".center.Detected_patient">
 
     <Button
         android:id="@+id/button"
