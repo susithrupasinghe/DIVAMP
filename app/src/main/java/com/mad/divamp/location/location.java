@@ -2,7 +2,7 @@ package com.mad.divamp.location;
 
 public class location {
 
-    private String email,Location_name,NIC,fullName,contactNo,category,Address_1,Address_2;
+    private String email,Location_name,NIC,fullName,contactNo,category,Address_1,Address_2,password;
 
     public location() {
         // empty constructor
@@ -49,7 +49,15 @@ public class location {
         Address_2 = address_2;
     }
 
-    public location(String category, String Address_1, String Address_2, String email, String Location_name, String NIC, String fullName, String contactNo){
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public location(String category, String Address_1, String Address_2, String email, String Location_name, String NIC, String fullName, String contactNo, String password){
         this.email=email;
         this.Location_name = Location_name;
         this.category = category;
@@ -58,6 +66,7 @@ public class location {
         this.NIC = NIC;
         this.fullName = fullName;
         this.contactNo = contactNo;
+        this.password = password;
     }
 
     public String getNIC() {

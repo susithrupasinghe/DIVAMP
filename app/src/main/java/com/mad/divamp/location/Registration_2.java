@@ -31,7 +31,7 @@ public class Registration_2 extends AppCompatActivity {
     FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     Spinner categoryId;
-    EditText email,location_name,NICEtd,fullNameEtd,contactNoEtd,Address_1,Address_2;
+    EditText email,location_name,NICEtd,fullNameEtd,contactNoEtd,Address_1,Address_2,password;
     Button btnFinish;
 
     @Override
@@ -45,6 +45,7 @@ public class Registration_2 extends AppCompatActivity {
 //        categoryId = findViewById(R.id.category);
         Address_1 = findViewById(R.id.Address_1);
         Address_2 = findViewById(R.id.Address_2);
+        password = findViewById(R.id.password);
 
         NICEtd = (EditText)findViewById(R.id.NIC);
         fullNameEtd = (EditText)findViewById(R.id.fullName);
@@ -58,6 +59,7 @@ public class Registration_2 extends AppCompatActivity {
         String category = intent.getStringExtra("category");
         String Address_1 = intent.getStringExtra("Address_1");
         String Address_2 = intent.getStringExtra("Address_2");
+        String password = intent.getStringExtra("password");
 
         btnFinish.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -75,18 +77,18 @@ public class Registration_2 extends AppCompatActivity {
                     contactNoEtd.setError("Please enter contact number");
                 } else {
                     // calling method to add data to Firebase Firestore.
-                    addData(email,Location_name,category,Address_1,Address_2,NIC, fullName, contactNo);
+                    addData(email,Location_name,category,Address_1,Address_2,NIC, fullName, contactNo,password);
                 }
             }
         });
 
     }
 
-    private void addData(String category,String Address_1,String Address_2, String email,String Location_name,String NIC,String fullName,String contactNo){
+    private void addData(String category,String Address_1,String Address_2, String email,String Location_name,String NIC,String fullName,String contactNo,String password){
 
         CollectionReference dbLocation = db.collection("location");
 
-        location location = new location(email,Location_name,category,Address_1,Address_2,NIC, fullName, contactNo);
+        location location = new location(email,Location_name,category,Address_1,Address_2,NIC, fullName, contactNo,password);
 
         dbLocation.add(location).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
             @Override
