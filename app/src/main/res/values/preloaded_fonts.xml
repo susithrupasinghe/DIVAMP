@@ -3,6 +3,5 @@
     <array name="preloaded_fonts" translatable="false">
         <item>@font/abhaya_libre_extrabold</item>
         <item>@font/yantramanav_bold</item>
-        <item>@font/yantramanav_thin</item>
     </array>
 </resources>

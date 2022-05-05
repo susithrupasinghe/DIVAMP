@@ -276,12 +276,19 @@
     <string name="admin_vacc_center_incharge_name">Incharge Full Name</string>
     <string name="admin_vacc_center_incharge_contact">Contact No</string>
     <string name="admin_vacc_center_incharge_email">Email</string>
-    <string name="CenterId">Center ID</string>
     <string name="Password">Password</string>
-    <string name="login">Login</string>
-    <string name="Reject">Reject</string>
-    <string name="Next">Next</string>
-    <string name="nic">NIC</string>
+    <string name="password" />
+    <string name="Email">E-mail</string>
+    <string name="Regiter">Regiter</string>
+    <string name="Registration_email">Email</string>
+    <string name="Registraion_passwors">Password</string>
+    <string name="Location_name">Location Name</string>
+    <string name="Category">Category</string>
+    <string name="Registration_category">Category</string>
+    <string name="PasswordReType">Password re-type</string>
+    <string name="Owner_NIC">Owner NIC</string>
+    <string name="Owner_full_name">Owner Full Name</string>
+    <string name="Phone_number">Phone Number</string>
 
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
