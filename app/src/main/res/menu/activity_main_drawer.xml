@@ -6,15 +6,19 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_home"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/ic_baseline_home_24"
             android:title="@string/menu_home" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_gallery" />
+            android:id="@+id/nav_infection"
+            android:icon="@drawable/ic_baseline_coronavirus_24"
+            android:title="@string/mark_infection" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="@string/menu_slideshow" />
+            android:id="@+id/nav_history"
+            android:icon="@drawable/ic_baseline_directions_run_24"
+            android:title="@string/individual_history" />
+        <item
+            android:id="@+id/nav_vaccine_registration"
+            android:icon="@drawable/ic_baseline_account_circle_24"
+            android:title="@string/vaccination_center_registration" />
     </group>
 </menu>

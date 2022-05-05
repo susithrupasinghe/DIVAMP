@@ -12,14 +12,20 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.mad.divamp.admin.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/nav_infection"
+        android:name="com.mad.divamp.admin.ui.infections.InfectionsFragment"
+        android:label="@string/mark_infection"
+        tools:layout="@layout/fragment_mark_infections" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.mad.divamp.admin.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/nav_history"
+        android:name="com.mad.divamp.admin.ui.history.HistoryFragment"
+        android:label="@string/individual_history"
+        tools:layout="@layout/fragment_history" />
+
+    <fragment
+        android:id="@+id/nav_vaccine_registration"
+        android:name="com.mad.divamp.admin.ui.registration.RegistrationFragment"
+        android:label="V-Center Registration"
+        tools:layout="@layout/fragment_registration" />
 </navigation>

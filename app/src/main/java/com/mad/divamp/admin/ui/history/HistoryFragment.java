@@ -1,4 +1,4 @@
-package com.mad.divamp.admin.ui.gallery;
+package com.mad.divamp.admin.ui.history;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,22 +10,22 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.mad.divamp.databinding.FragmentGalleryBinding;
+import com.mad.divamp.databinding.FragmentHistoryBinding;
 
-public class GalleryFragment extends Fragment {
+public class HistoryFragment extends Fragment {
 
-    private FragmentGalleryBinding binding;
+    private FragmentHistoryBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        GalleryViewModel galleryViewModel =
-                new ViewModelProvider(this).get(GalleryViewModel.class);
+        HistoryViewModel slideshowViewModel =
+                new ViewModelProvider(this).get(HistoryViewModel.class);
 
-        binding = FragmentGalleryBinding.inflate(inflater, container, false);
+        binding = FragmentHistoryBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        final TextView textView = binding.textGallery;
-        galleryViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        final TextView textView = binding.textHistory;
+        slideshowViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 
