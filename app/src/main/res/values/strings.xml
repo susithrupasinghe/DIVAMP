@@ -289,6 +289,8 @@
     <string name="Owner_NIC">Owner NIC</string>
     <string name="Owner_full_name">Owner Full Name</string>
     <string name="Phone_number">Phone Number</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
