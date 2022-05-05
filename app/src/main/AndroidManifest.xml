@@ -13,6 +13,30 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Divamp">
         <activity
+            android:name=".citizen.qrcode"
+            android:exported="false" />
+        <activity
+            android:name=".citizen.navbar"
+            android:exported="false" />
+        <activity
+            android:name=".citizen.alert"
+            android:exported="false" />
+        <activity
+            android:name=".citizen.status"
+            android:exported="false" />
+        <activity
+            android:name=".citizen.home"
+            android:exported="false" />
+        <activity
+            android:name=".citizen.registration3"
+            android:exported="false" />
+        <activity
+            android:name=".citizen.registration2"
+            android:exported="false" />
+        <activity
+            android:name=".citizen.registration1"
+            android:exported="false" />
+        <activity
             android:name=".citizen.login"
             android:exported="false" />
         <activity
@@ -29,7 +53,7 @@
         <activity
             android:name=".admin.AdminLoginActivity"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".location.Registration_3"
             android:exported="false" />
