@@ -280,6 +280,8 @@
     <string name="Password">Password</string>
     <string name="login">Login</string>
     <string name="Reject">Reject</string>
+    <string name="Next">Next</string>
+    <string name="nic">NIC</string>
 
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
