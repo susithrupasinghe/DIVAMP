@@ -24,7 +24,7 @@
 
     <string name="citizen_title_line_1">Citizen</string>
     <string name="citizen_title_line_2">Portal</string>
-    <string name="citizen_self_registration">Registration</string>
+    <string name="citizen_self_registration">Self Registration</string>
     <string name="citizen_bio_details">Bio Details</string>
     <string name="citizen_contact_details">Contact Details</string>
     <string name="citizen_finish">Finish</string>
@@ -314,6 +314,8 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+    <string name="citizen_login_email">Email</string>
+    <string name="citizen_login_password">Password</string>
 
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
