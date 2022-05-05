@@ -289,6 +289,8 @@
     <string name="Owner_NIC">Owner NIC</string>
     <string name="Owner_full_name">Owner Full Name</string>
     <string name="Phone_number">Phone Number</string>
+    <string name="RejectBtn">Reject</string>
+    <string name="CenterIdb">Center ID</string>
 
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////

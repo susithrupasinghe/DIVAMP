@@ -10,21 +10,21 @@
     <Button
         android:id="@+id/button"
         android:layout_width="138dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="480dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="496dp"
         android:background="@drawable/ic_reject_button"
         android:foreground="@drawable/ic_reject_button"
-        android:text="@string/Reject"
+        android:text="@string/RejectBtn"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/finishbtn"
         android:layout_width="139dp"
-        android:layout_height="45dp"
-        android:layout_marginStart="212dp"
-        android:layout_marginTop="480dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="216dp"
+        android:layout_marginTop="496dp"
         android:background="@drawable/ic_finish_button"
         android:foreground="@drawable/ic_finish_button"
         android:text="Button"
@@ -32,11 +32,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/batchID"
         android:layout_width="284dp"
         android:layout_height="31dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="380dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="396dp"
         android:background="@drawable/ic_login_center_id"
         android:ems="10"
         android:fontFamily="@font/abhaya_libre_extrabold"
@@ -51,8 +51,8 @@
         android:id="@+id/editTextTextPersonName2"
         android:layout_width="285dp"
         android:layout_height="34dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="424dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="440dp"
         android:background="@drawable/ic_login_center_id"
         android:ems="10"
         android:fontFamily="@font/abhaya_libre_extrabold"
@@ -86,6 +86,30 @@
         android:text="Vaccination"
         android:textColor="#FFFFFF"
         android:textSize="28sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="216dp"
+        android:layout_marginTop="544dp"
+        android:background="@drawable/ic_vaccine_edit"
+        android:foreground="@drawable/ic_vaccine_edit"
+        android:text="Button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="544dp"
+        android:background="@drawable/ic_vaccine_delete"
+        android:foreground="@drawable/ic_vaccine_delete"
+        android:text="Button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

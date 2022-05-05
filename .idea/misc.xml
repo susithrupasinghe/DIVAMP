@@ -4,17 +4,25 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/OSANDA/SLIIT/MAD project/DIVAMP/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1445" />
+        <entry key="..\:/OSANDA/SLIIT/MAD project/DIVAMP/app/src/main/res/drawable/ic_background.xml" value="0.2155" />
         <entry key="..\:/OSANDA/SLIIT/MAD project/DIVAMP/app/src/main/res/drawable/ic_detected_patient.xml" value="0.176" />
         <entry key="..\:/OSANDA/SLIIT/MAD project/DIVAMP/app/src/main/res/drawable/ic_finish_button.xml" value="0.1445" />
+        <entry key="..\:/OSANDA/SLIIT/MAD project/DIVAMP/app/src/main/res/drawable/ic_location_name.xml" value="0.2155" />
+        <entry key="..\:/OSANDA/SLIIT/MAD project/DIVAMP/app/src/main/res/drawable/ic_login_background.xml" value="0.2155" />
+        <entry key="..\:/OSANDA/SLIIT/MAD project/DIVAMP/app/src/main/res/drawable/ic_login_background_picture.xml" value="0.2155" />
         <entry key="..\:/OSANDA/SLIIT/MAD project/DIVAMP/app/src/main/res/drawable/ic_login_button.xml" value="0.1445" />
+        <entry key="..\:/OSANDA/SLIIT/MAD project/DIVAMP/app/src/main/res/drawable/ic_login_center_id.xml" value="0.2155" />
         <entry key="..\:/OSANDA/SLIIT/MAD project/DIVAMP/app/src/main/res/drawable/ic_login_image.xml" value="0.1445" />
         <entry key="..\:/OSANDA/SLIIT/MAD project/DIVAMP/app/src/main/res/drawable/ic_qr.xml" value="0.2595" />
-        <entry key="..\:/OSANDA/SLIIT/MAD project/DIVAMP/app/src/main/res/layout/activity_detected_patient.xml" value="0.2" />
+        <entry key="..\:/OSANDA/SLIIT/MAD project/DIVAMP/app/src/main/res/layout/activity_center.xml" value="0.20833333333333334" />
+        <entry key="..\:/OSANDA/SLIIT/MAD project/DIVAMP/app/src/main/res/layout/activity_detected_patient.xml" value="0.25" />
         <entry key="..\:/OSANDA/SLIIT/MAD project/DIVAMP/app/src/main/res/layout/activity_log_in.xml" value="0.1" />
         <entry key="..\:/OSANDA/SLIIT/MAD project/DIVAMP/app/src/main/res/layout/activity_login.xml" value="0.2" />
         <entry key="..\:/OSANDA/SLIIT/MAD project/DIVAMP/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/OSANDA/SLIIT/MAD project/DIVAMP/app/src/main/res/layout/activity_registration2.xml" value="0.20833333333333334" />
         <entry key="..\:/OSANDA/SLIIT/MAD project/DIVAMP/app/src/main/res/layout/activity_scan_qr.xml" value="0.176" />
         <entry key="..\:/OSANDA/SLIIT/MAD project/DIVAMP/app/src/main/res/layout/activity_splash_screen.xml" value="0.25416666666666665" />
+        <entry key="..\:/OSANDA/SLIIT/MAD project/DIVAMP/app/src/main/res/layout/activity_update_patient.xml" value="0.20833333333333334" />
         <entry key="..\:/Users/Dell/Desktop/GRP project/DIVAMP/app/src/main/res/layout/activity_main.xml" value="0.12613981762917933" />
         <entry key="..\:/Users/Dell/Desktop/GRP project/DIVAMP/app/src/main/res/layout/activity_splash_screen.xml" value="0.2890625" />
       </map>

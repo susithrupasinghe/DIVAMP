@@ -13,20 +13,27 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Divamp">
         <activity
-            android:name=".center.Scan_QR"
-            android:exported="true" >
-        <intent-filter>
-        <action android:name="android.intent.action.MAIN" />
+            android:name=".center.Update_patient"
+            android:exported="true" />
 
-        <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter></activity>
+
+        <activity
+            android:name=".center.Scan_QR"
+            android:exported="true" />
         <activity
             android:name=".center.Detected_patient"
             android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
+
+
         <activity
             android:name=".center.login"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".SplashScreenActivity"
             android:exported="true" />

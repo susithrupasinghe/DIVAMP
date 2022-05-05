@@ -23,7 +23,7 @@
         app:layout_constraintTop_toBottomOf="@+id/contactNumber" />
 
     <Button
-        android:id="@+id/finish_btn"
+        android:id="@+id/finishbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="184dp"

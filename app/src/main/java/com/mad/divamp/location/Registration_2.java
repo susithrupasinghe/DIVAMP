@@ -1,5 +1,4 @@
 package com.mad.divamp.location;
-import com.mad.divamp.MainActivity;
 import com.mad.divamp.R;
 
 import androidx.annotation.NonNull;
@@ -14,14 +13,9 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-import java.util.HashMap;
-import java.util.Map;
-
-import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -51,7 +45,7 @@ public class Registration_2 extends AppCompatActivity {
         fullNameEtd = (EditText)findViewById(R.id.fullName);
         contactNoEtd = (EditText)findViewById(R.id.contactNumber);
 
-        btnFinish = (Button) findViewById(R.id.finish_btn);
+        btnFinish = (Button) findViewById(R.id.finishbtn);
 
         Intent intent = getIntent();
         String email = intent.getStringExtra("email");
