@@ -1,9 +1,12 @@
 package com.mad.divamp.admin;
 import  com.mad.divamp.R;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
+import android.widget.Toast;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
@@ -16,6 +19,8 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.mad.divamp.databinding.ActivityAdminMainBinding;
+
+import es.dmoral.toasty.Toasty;
 
 public class AdminMainActivity extends AppCompatActivity {
 
@@ -48,6 +53,8 @@ public class AdminMainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_admin_main);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+
     }
 
     @Override
