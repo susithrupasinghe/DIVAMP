@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation4"
+    app:startDestination="@+id/nav_citizen_home">
+
+    <fragment
+        android:id="@+id/nav_citizen_home"
+        android:name="com.mad.divamp.citizen.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/citizen_home_fragment" />
+    <fragment
+        android:id="@+id/nav_citizen_status"
+        android:name="com.mad.divamp.citizen.ui.status.StatusFragment"
+        android:label="@string/Status"
+        tools:layout="@layout/citizen_status_fragment" />
+    <fragment
+        android:id="@+id/nav_citizen_notification"
+        android:name="com.mad.divamp.citizen.ui.notification.AlertNotificationFragment"
+        android:label="@string/AlertNotification"
+        tools:layout="@layout/citizen_alert_notification_fragment" />
+    <fragment
+        android:id="@+id/nav_citizen_qr_code"
+        android:name="com.mad.divamp.citizen.ui.qrcode.QrCodeFragment"
+        android:label="@string/QRCode"
+        tools:layout="@layout/citizen_qr_code_fragment" />
+    <fragment
+        android:id="@+id/nav_citizen_settings"
+        android:name="com.mad.divamp.citizen.ui.settings.SettingsFragment"
+        android:label="@string/Settings"
+        tools:layout="@layout/citizen_settings_fragment" />
+
+</navigation>
