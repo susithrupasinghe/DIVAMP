@@ -13,43 +13,31 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Divamp">
         <activity
-            android:name=".citizen.qrcode"
-            android:exported="false" />
+            android:name=".location.LocationMainActivity"
+            android:exported="true"
+            android:label="@string/title_activity_location_main"
+            android:theme="@style/Theme.Divamp.NoActionBar" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
         <activity
-            android:name=".citizen.navbar"
-            android:exported="false" />
-        <activity
-            android:name=".citizen.alert"
-            android:exported="false" />
-        <activity
-            android:name=".citizen.status"
-            android:exported="false" />
-        <activity
-            android:name=".citizen.home"
-            android:exported="false" />
-        <activity
-            android:name=".citizen.registration3"
-            android:exported="false" />
-        <activity
-            android:name=".citizen.registration2"
-            android:exported="false" />
-        <activity
-            android:name=".citizen.registration1"
-            android:exported="false" />
-        <activity
-            android:name=".citizen.login"
-            android:exported="false" />
+            android:name=".center.CenterMainActivity"
+            android:exported="true"
+            android:label="@string/title_activity_center_main"
+            android:theme="@style/Theme.Divamp.NoActionBar"></activity>
         <activity
             android:name=".admin.AdminMainActivity"
             android:exported="true"
             android:label="@string/title_activity_admin_main"
             android:theme="@style/Theme.Divamp.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
+        <activity
+            android:name=".location.CustomerHistory"
+            android:exported="false" />
         <activity
             android:name=".admin.AdminLoginActivity"
             android:exported="true"
@@ -59,10 +47,10 @@
             android:exported="false" />
         <activity
             android:name=".location.Registration_2"
-            android:exported="true" />
+            android:exported="true"></activity>
         <activity
             android:name=".location.Registration"
-            android:exported="true" />
+            android:exported="true"></activity>
         <activity
             android:name=".location.logIn"
             android:exported="true" />
