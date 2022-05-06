@@ -40,7 +40,6 @@ public class Registration_2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registration2);
 
-        email = findViewById(R.id.email);
         location_name = findViewById(R.id.location_name);
 //        categoryId = findViewById(R.id.category);
         Address_1 = findViewById(R.id.Address_1);
