@@ -64,9 +64,9 @@ public class Registration1Activity extends AppCompatActivity {
                 }else if (TextUtils.isEmpty(strPassword)) {
                     password.setError("Please enter Password");
                 }
-//                else if(password != passwordReEnter){
-//                    passwordReEnter.setError("Password and Confirm Password do not match");
-//                }
+                else if(!strPassword.equals(strPasswordReEnter)){
+                    passwordReEnter.setError("Password and Confirm Password do not match");
+                }
                 else {
                     // calling method to add data to Firebase Firestore.
                     next();
