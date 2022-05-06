@@ -324,6 +324,12 @@
     <string name="title_activity_location_main">LocationMainActivity</string>
     <string name="customer_history">Customer History</string>
     <string name="alert_notification">Alert Notification</string>
+    <string name="title_activity_citizen_main">CitizenMainActivity</string>
+    <string name="status">Status</string>
+    <string name="Status">Status</string>
+    <string name="AlertNotification">Alert Notification</string>
+    <string name="QRCode">QR Code</string>
+    <string name="Settings">Settings</string>
 
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
