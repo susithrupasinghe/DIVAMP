@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Divamp">
         <activity
+            android:name=".citizen.userManagement.Register1Activity"
+            android:exported="false" />
+        <activity
             android:name=".citizen.userManagement.LoginActivity"
             android:exported="true">
             <intent-filter>
@@ -36,7 +39,7 @@
             android:name=".location.LocationMainActivity"
             android:exported="true"
             android:label="@string/title_activity_location_main"
-            android:theme="@style/Theme.Divamp.NoActionBar"></activity>
+            android:theme="@style/Theme.Divamp.NoActionBar" />
         <activity
             android:name=".center.CenterMainActivity"
             android:exported="true"
