@@ -1,16 +1,15 @@
-package com.mad.divamp.admin.ui.slideshow;
+package com.mad.divamp.admin.ui.registration;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
-public class SlideshowViewModel extends ViewModel {
-
+public class RegistrationViewModel extends ViewModel {
     private final MutableLiveData<String> mText;
 
-    public SlideshowViewModel() {
+    public RegistrationViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is slideshow fragment");
+        mText.setValue("This is Registration fragment");
     }
 
     public LiveData<String> getText() {
