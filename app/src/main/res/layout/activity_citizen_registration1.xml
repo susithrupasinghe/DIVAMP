@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_citizen_background"
+    tools:context=".location.Registration">
+
+    <EditText
+        android:id="@+id/firstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="260dp"
+        android:background="@drawable/ic_citizen_input_big"
+        android:ems="10"
+        android:fontFamily="@font/abhaya_libre_extrabold"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:paddingLeft="30dp"
+        android:text="@string/citizen_reg_first_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="233dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="156dp"
+        android:fontFamily="@font/yantramanav_bold"
+        android:text="@string/citizen_self_registration"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="93dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="88dp"
+        android:fontFamily="@font/yantramanav_bold"
+        android:text="@string/citizen_title_line_2"
+        android:textColor="#F26421"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="175dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="44dp"
+        android:fontFamily="@font/yantramanav_bold"
+        android:text="@string/citizen_title_line_1"
+        android:textColor="#FFFFFF"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/lastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/ic_registration_text"
+        android:ems="10"
+        android:fontFamily="@font/abhaya_libre_extrabold"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:paddingLeft="30dp"
+        android:text="@string/citizen_reg_last_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstName" />
+
+    <EditText
+        android:id="@+id/nic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/ic_registration_text"
+        android:ems="10"
+        android:fontFamily="@font/abhaya_libre_extrabold"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:paddingLeft="30dp"
+        android:text="@string/citizen_nic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lastName" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:background="@drawable/ic_citizen_input_big"
+        android:ems="10"
+        android:fontFamily="@font/abhaya_libre_extrabold"
+        android:hint="@string/citizen_reg_password"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:paddingLeft="30dp"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gender" />
+
+    <EditText
+        android:id="@+id/passwordRetype"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/ic_citizen_input_big"
+        android:ems="10"
+        android:fontFamily="@font/abhaya_libre_extrabold"
+        android:hint="@string/citizen_reg_password"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:paddingLeft="30dp"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password" />
+
+    <Button
+        android:id="@+id/reg_next_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="184dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/ic_next_btn"
+        android:foreground="@drawable/ic_next_btn"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/dateOfBirth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/ic_citizen_input_big"
+        android:ems="10"
+        android:inputType="date"
+        android:minHeight="48dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:text="@string/citizen_reg_birthday"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nic" />
+
+    <Spinner
+        android:id="@+id/gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/ic_citizen_input_big"
+        android:contentDescription="@string/citizen_reg_gender"
+        android:minHeight="48dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateOfBirth" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
