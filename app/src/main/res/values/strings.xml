@@ -24,7 +24,7 @@
 
     <string name="citizen_title_line_1">Citizen</string>
     <string name="citizen_title_line_2">Portal</string>
-    <string name="citizen_self_registration">Registration</string>
+    <string name="citizen_self_registration">Self Registration</string>
     <string name="citizen_bio_details">Bio Details</string>
     <string name="citizen_contact_details">Contact Details</string>
     <string name="citizen_finish">Finish</string>
@@ -35,17 +35,18 @@
 
     //Citizen portal - login
 
-    <string name="citizen_login">Login</string>
-    <string name="citizen_nic">NIC</string>
-    <string name="citizen_password">Password</string>
-    <string name="citizen_login_btn">Login</string>
-    <string name="citizen_login_reg_divider">Or</string>
-    <string name="citizen_register_btn">Register</string>
+    <string name="citizen_login_login">Login</string>
+    <string name="citizen_login_nic">NIC</string>
+    <string name="citizen_login_password">Password</string>
+    <string name="citizen_login_login_btn">Login</string>
+    <string name="citizen_login_divider">Or</string>
+    <string name="citizen_login_register_btn">Register</string>
 
     //Citizen portal - Register Step 1
 
     <string name="citizen_reg_first_name">First Name</string>
     <string name="citizen_reg_last_name">Last Name</string>
+    <string name="citizen_reg_nic">NIC</string>
     <string name="citizen_reg_birthday">Birthday</string>
     <string name="citizen_reg_gender">Gender</string>
     <string name="citizen_reg_password">Password</string>
