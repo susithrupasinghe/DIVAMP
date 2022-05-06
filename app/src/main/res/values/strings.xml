@@ -321,6 +321,9 @@
     <string name="vaccination_summery">Vaccination Summery</string>
     <string name="infected_summery">Infected Summery</string>
     <string name="title_activity_center_main">CenterMainActivity</string>
+    <string name="title_activity_location_main">LocationMainActivity</string>
+    <string name="customer_history">Customer History</string>
+    <string name="alert_notification">Alert Notification</string>
 
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
