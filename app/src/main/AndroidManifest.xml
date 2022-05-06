@@ -17,11 +17,7 @@
             android:exported="true"
             android:label="@string/title_activity_citizen_main"
             android:theme="@style/Theme.Divamp.NoActionBar" >
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
     </activity>
         <activity
             android:name=".location.LocationMainActivity"
@@ -46,7 +42,13 @@
         <activity
             android:name=".admin.AdminLoginActivity"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".location.Registration_3"
             android:exported="false" />
