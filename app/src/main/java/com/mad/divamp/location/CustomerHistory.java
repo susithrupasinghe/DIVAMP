@@ -17,7 +17,7 @@ public class CustomerHistory extends AppCompatActivity {
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     RecyclerView recyclerView;
 //    DatabaseReference database;
-    MyAdapter myAdapter;
+//    MyAdapter myAdapter;
     ArrayList<Customer> list;
 
     @Override
@@ -32,7 +32,7 @@ public class CustomerHistory extends AppCompatActivity {
 
         list = new ArrayList<>();
 //        MyAdapter = new MyAdapter(this,list);
-        recyclerView.setAdapter(myAdapter);
+//        recyclerView.setAdapter(myAdapter);
 //        dbCustomer
 
     }

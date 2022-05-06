@@ -75,7 +75,7 @@ public class Registration extends AppCompatActivity {
                     password.setError("Please enter Password");
                 }
 //                else if(password != passwordReEnter){
-//                    passwordReEnter.setError("Password and Password Re Enter fields are different");
+//                    passwordReEnter.setError("Password and Confirm Password do not match");
 //                }
                 else {
                     // calling method to add data to Firebase Firestore.

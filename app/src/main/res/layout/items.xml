@@ -8,116 +8,116 @@
     app:cardCornerRadius="8dp"
     app:cardElevation="8dp">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:orientation="vertical">
+<!--    <LinearLayout-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginLeft="16dp"-->
+<!--        android:orientation="vertical">-->
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:orientation="horizontal">
+<!--        <LinearLayout-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center_vertical"-->
+<!--            android:orientation="horizontal">-->
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Name"
-                            android:textColor=""
-                            android:textSize="26dp"
-                            android:textStyle="bold"/>
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="Name"-->
+<!--                            android:textColor=""-->
+<!--                            android:textSize="26dp"-->
+<!--                            android:textStyle="bold"/>-->
 
-            <TextView
-                android:id="@+id/name_C"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="8dp"
-                android:text=""
-                android:textColor=""
-                android:textColorHint="#000000"
-                android:textSize="28dp" />
+<!--            <TextView-->
+<!--                android:id="@+id/name_C"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_marginLeft="8dp"-->
+<!--                android:text=""-->
+<!--                android:textColor=""-->
+<!--                android:textColorHint="#000000"-->
+<!--                android:textSize="28dp" />-->
 
-        </LinearLayout>
+<!--        </LinearLayout>-->
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:orientation="horizontal">
+<!--        <LinearLayout-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center_vertical"-->
+<!--            android:orientation="horizontal">-->
 
-            <!--            <TextView-->
-            <!--                android:layout_width="wrap_content"-->
-            <!--                android:layout_height="wrap_content"-->
-            <!--                android:text="Name"-->
-            <!--                android:textColor=""-->
-            <!--                android:textSize="26dp"-->
-            <!--                android:textStyle="bold"/>-->
+<!--            &lt;!&ndash;            <TextView&ndash;&gt;-->
+<!--            &lt;!&ndash;                android:layout_width="wrap_content"&ndash;&gt;-->
+<!--            &lt;!&ndash;                android:layout_height="wrap_content"&ndash;&gt;-->
+<!--            &lt;!&ndash;                android:text="Name"&ndash;&gt;-->
+<!--            &lt;!&ndash;                android:textColor=""&ndash;&gt;-->
+<!--            &lt;!&ndash;                android:textSize="26dp"&ndash;&gt;-->
+<!--            &lt;!&ndash;                android:textStyle="bold"/>&ndash;&gt;-->
 
-            <TextView
-                android:id="@+id/NIC_C"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:text=""
-                android:textColor=""
-                android:textColorHighlight="#000000"
-                android:textColorHint="#EDEDED"
-                android:textSize="28dp" />
+<!--            <TextView-->
+<!--                android:id="@+id/NIC_C"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="8dp"-->
+<!--                android:text=""-->
+<!--                android:textColor=""-->
+<!--                android:textColorHighlight="#000000"-->
+<!--                android:textColorHint="#EDEDED"-->
+<!--                android:textSize="28dp" />-->
 
-        </LinearLayout>
+<!--        </LinearLayout>-->
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:orientation="horizontal">
+<!--        <LinearLayout-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center_vertical"-->
+<!--            android:orientation="horizontal">-->
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Name"
-                            android:textColor=""
-                            android:textSize="26dp"
-                            android:textStyle="bold"/>
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="Name"-->
+<!--                            android:textColor=""-->
+<!--                            android:textSize="26dp"-->
+<!--                            android:textStyle="bold"/>-->
 
-            <TextView
-                android:id="@+id/dateTime_C"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:text=""
-                android:textColor=""
-                android:textSize="28dp" />
+<!--            <TextView-->
+<!--                android:id="@+id/dateTime_C"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="8dp"-->
+<!--                android:text=""-->
+<!--                android:textColor=""-->
+<!--                android:textSize="28dp" />-->
 
-        </LinearLayout>
+<!--        </LinearLayout>-->
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:orientation="horizontal">
+<!--        <LinearLayout-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center_vertical"-->
+<!--            android:orientation="horizontal">-->
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Name"
-                            android:textColor=""
-                            android:textSize="26dp"
-                            android:textStyle="bold"/>
+<!--                        <TextView-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="Name"-->
+<!--                            android:textColor=""-->
+<!--                            android:textSize="26dp"-->
+<!--                            android:textStyle="bold"/>-->
 
-            <TextView
-                android:id="@+id/contactNumber_C"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="8dp"
-                android:text=""
-                android:textColor=""
-                android:textSize="28dp" />
+<!--            <TextView-->
+<!--                android:id="@+id/contactNumber_C"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="8dp"-->
+<!--                android:text=""-->
+<!--                android:textColor=""-->
+<!--                android:textSize="28dp" />-->
 
-        </LinearLayout>
+<!--        </LinearLayout>-->
 
-    </LinearLayout>
+<!--    </LinearLayout>-->
 
 
 </androidx.cardview.widget.CardView>
