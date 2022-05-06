@@ -317,6 +317,9 @@
     <string name="mark_infection">Mark Infection</string>
     <string name="individual_history">Individual History</string>
     <string name="vaccination_center_registration">Vaccination Center Registration</string>
+    <string name="vaccination_summery">Vaccination Summery</string>
+    <string name="infected_summery">Infected Summery</string>
+    <string name="title_activity_center_main">CenterMainActivity</string>
 
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
