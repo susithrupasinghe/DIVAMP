@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ic_login_background"
+    android:background="@drawable/ic_citizen_background"
     tools:context=".location.Registration">
 
     <EditText
@@ -16,7 +16,7 @@
         android:background="@drawable/ic_citizen_input_big"
         android:ems="10"
         android:fontFamily="@font/abhaya_libre_extrabold"
-        android:inputType="textEmailAddress"
+        android:inputType="textPersonName"
         android:minHeight="48dp"
         android:paddingLeft="30dp"
         android:text="@string/citizen_reg_first_name"
@@ -88,7 +88,7 @@
         android:background="@drawable/ic_registration_text"
         android:ems="10"
         android:fontFamily="@font/abhaya_libre_extrabold"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:minHeight="48dp"
         android:paddingLeft="30dp"
         android:text="@string/citizen_nic"
