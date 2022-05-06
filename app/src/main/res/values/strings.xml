@@ -35,12 +35,12 @@
 
     //Citizen portal - login
 
-    <string name="citizen_login">Login</string>
-    <string name="citizen_nic">NIC</string>
-    <string name="citizen_password">Password</string>
-    <string name="citizen_login_btn">Login</string>
-    <string name="citizen_login_reg_divider">Or</string>
-    <string name="citizen_register_btn">Register</string>
+    <string name="citizen_login_login">Login</string>
+    <string name="citizen_login_nic">NIC</string>
+    <string name="citizen_login_password">Password</string>
+    <string name="citizen_login_login_btn">Login</string>
+    <string name="citizen_login_divider">Or</string>
+    <string name="citizen_login_register_btn">Register</string>
 
     //Citizen portal - Register Step 1
 
