@@ -1,4 +1,4 @@
-package com.mad.divamp.admin.ui.gallery;
+package com.mad.divamp.admin.ui.infections;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -10,18 +10,18 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.mad.divamp.databinding.FragmentGalleryBinding;
+import com.mad.divamp.databinding.FragmentMarkInfectionsBinding;
 
-public class GalleryFragment extends Fragment {
+public class InfectionsFragment extends Fragment {
 
-    private FragmentGalleryBinding binding;
+    private FragmentMarkInfectionsBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        GalleryViewModel galleryViewModel =
-                new ViewModelProvider(this).get(GalleryViewModel.class);
+        InfectionViewModel galleryViewModel =
+                new ViewModelProvider(this).get(InfectionViewModel.class);
 
-        binding = FragmentGalleryBinding.inflate(inflater, container, false);
+        binding = FragmentMarkInfectionsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
         final TextView textView = binding.textGallery;
