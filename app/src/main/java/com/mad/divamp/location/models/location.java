@@ -1,4 +1,4 @@
-package com.mad.divamp.location;
+package com.mad.divamp.location.models;
 
 public class location {
 
@@ -57,7 +57,7 @@ public class location {
         this.password = password;
     }
 
-    public location(String category, String Address_1, String Address_2, String email, String Location_name, String NIC, String fullName, String contactNo, String password){
+    public location(String Location_name,String category, String Address_1, String Address_2, String NIC, String fullName, String contactNo, String password,String email){
         this.email=email;
         this.Location_name = Location_name;
         this.category = category;

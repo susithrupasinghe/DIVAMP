@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/ic_login_background"
-    tools:context=".location.Registration_3">
+    tools:context=".location.registration.Registration3Activity">
 
     <Button
         android:id="@+id/logInNow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="184dp"
-        android:layout_marginTop="524dp"
+        android:layout_marginStart="188dp"
+        android:layout_marginTop="540dp"
         android:background="@drawable/ic_login_now"
         android:foreground="@drawable/ic_login_now"
         android:text="Button"
@@ -37,7 +37,7 @@
         android:layout_width="233dp"
         android:layout_height="34dp"
         android:layout_marginStart="88dp"
-        android:layout_marginTop="156dp"
+        android:layout_marginTop="172dp"
         android:fontFamily="@font/yantramanav_bold"
         android:text="Self Registration"
         android:textColor="#000000"
@@ -62,10 +62,9 @@
         android:id="@+id/imageView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="220dp"
+        android:layout_marginBottom="228dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/ic_registration_3_back_image" />
+        app:srcCompat="@drawable/ic_registration_3_back_image"
+        tools:layout_editor_absoluteX="16dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

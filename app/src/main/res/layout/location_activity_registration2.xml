@@ -5,19 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/ic_login_background"
-    tools:context=".location.Registration_2">
+    tools:context=".location.registration.Registration2Activity">
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress2"
+        android:id="@+id/RegEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/ic_email"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/ic_input"
         android:ems="10"
         android:fontFamily="@font/abhaya_libre_extrabold"
+        android:hint="E-mail"
         android:inputType="textEmailAddress"
         android:paddingLeft="30dp"
-        android:text="E-mail"
+        android:text=""
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/contactNumber" />
@@ -40,12 +41,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
         android:layout_marginTop="24dp"
-        android:background="@drawable/ic_registration_text"
+        android:background="@drawable/ic_input"
         android:ems="10"
         android:fontFamily="@font/abhaya_libre_extrabold"
+        android:hint="Full Name"
         android:inputType="textPersonName"
         android:paddingLeft="30dp"
-        android:text="@string/Owner_full_name"
+        android:text=""
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/NIC" />
 
@@ -55,12 +57,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
         android:layout_marginTop="284dp"
-        android:background="@drawable/ic_registration_text"
+        android:background="@drawable/ic_input"
         android:ems="10"
         android:fontFamily="@font/abhaya_libre_extrabold"
+        android:hint="NIC"
         android:inputType="textPersonName"
         android:paddingLeft="30dp"
-        android:text="@string/Owner_NIC"
+        android:text=""
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -109,12 +112,14 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
         android:layout_marginTop="24dp"
-        android:background="@drawable/ic_registration_text"
+        android:background="@drawable/ic_input"
         android:ems="10"
         android:fontFamily="@font/abhaya_libre_extrabold"
+        android:hint="Contact Number"
         android:inputType="phone"
         android:paddingLeft="30dp"
-        android:text="@string/Phone_number"
+        android:text=""
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fullName" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

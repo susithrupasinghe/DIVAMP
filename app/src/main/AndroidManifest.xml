@@ -13,6 +13,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Divamp">
         <activity
+            android:name=".location.registration.Registration3Activity"
+            android:exported="false" />
+        <activity
+            android:name=".location.registration.Registration2Activity"
+            android:exported="true">
+
+        </activity>
+        <activity
             android:name=".citizen.userManagement.Register3Activity"
             android:exported="false" />
         <activity
@@ -23,6 +31,9 @@
             android:exported="false" />
         <activity
             android:name=".citizen.userManagement.LoginActivity"
+            android:exported="true" />
+        <activity
+            android:name=".location.registration.Registration1Activity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,17 +42,13 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".location.logIn.LogIn1Activity"
+            android:exported="true" />
+        <activity
             android:name=".citizen.CitizenMainActivity"
             android:exported="true"
             android:label="@string/title_activity_citizen_main"
-
-            android:theme="@style/Theme.Divamp.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:theme="@style/Theme.Divamp.NoActionBar" />
         <activity
             android:name=".location.LocationMainActivity"
             android:exported="true"
@@ -63,25 +70,10 @@
         <activity
             android:name=".admin.AdminLoginActivity"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".location.Registration_3"
             android:exported="false" />
-        <activity
-            android:name=".location.Registration_2"
-            android:exported="true" />
-        <activity
-            android:name=".location.Registration"
-            android:exported="true" />
-        <activity
-            android:name=".location.logIn"
-            android:exported="true" />
         <activity
             android:name=".SplashScreenActivity"
             android:exported="true" />
