@@ -13,7 +13,6 @@ import android.widget.Spinner;
 
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.mad.divamp.R;
-import com.mad.divamp.location.Registration_2;
 
 public class Registration1Activity extends AppCompatActivity {
 
@@ -78,10 +77,10 @@ public class Registration1Activity extends AppCompatActivity {
         Intent intent = new Intent(Registration1Activity.this, Registration2Activity.class);
         // passing the bundle to the intent
 
-        intent.putExtra("Location_name",strLocation_name);
-        intent.putExtra("Category",strCategory);
-        intent.putExtra("Address_1",strAddress_1);
-        intent.putExtra("Address_2",strAddress_2);
+        intent.putExtra("location_name",strLocation_name);
+        intent.putExtra("category",strCategory);
+        intent.putExtra("address_1",strAddress_1);
+        intent.putExtra("address_2",strAddress_2);
         intent.putExtra("password",strPassword);
         // starting the activity by passing the intent
         // to it.

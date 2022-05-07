@@ -18,9 +18,7 @@ import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.mad.divamp.R;
-import com.mad.divamp.location.Registration_2;
-import com.mad.divamp.location.Registration_3;
-import com.mad.divamp.location.location;
+import com.mad.divamp.location.models.location;
 
 import es.dmoral.toasty.Toasty;
 
@@ -54,10 +52,10 @@ public class Registration2Activity extends AppCompatActivity {
 
         Intent intent = getIntent();
 //        String email = intent.getStringExtra("email");
-        String Location_name = intent.getStringExtra("Location_name");
+        String Location_name = intent.getStringExtra("location_name");
         String category = intent.getStringExtra("category");
-        String Address_1 = intent.getStringExtra("Address_1");
-        String Address_2 = intent.getStringExtra("Address_2");
+        String Address_1 = intent.getStringExtra("address_1");
+        String Address_2 = intent.getStringExtra("address_2");
         String password = intent.getStringExtra("password");
 
         btnFinish.setOnClickListener(new View.OnClickListener(){
@@ -79,24 +77,24 @@ public class Registration2Activity extends AppCompatActivity {
                     contactNoEtd.setError("Please enter contact number");
                 } else {
                     // calling method to add data to Firebase Firestore.
-                    addData(email,Location_name,category,Address_1,Address_2,NIC, fullName, contactNo,password);
+                    addData(Location_name,category,Address_1,Address_2,NIC, fullName, contactNo,password,email);
                 }
             }
         });
     }
 
-    private void addData(String category,String Address_1,String Address_2, String email,String Location_name,String NIC,String fullName,String contactNo,String password){
+    private void addData(String Location_name,String category, String Address_1, String Address_2, String NIC, String fullName, String contactNo, String password,String email){
 
         CollectionReference dbLocation = db.collection("location");
 
-        location location = new location(email,Location_name,category,Address_1,Address_2,NIC, fullName, contactNo,password);
+        location location = new location(Location_name,category,Address_1,Address_2,NIC, fullName, contactNo,password,email);
 
         dbLocation.add(location).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
             @Override
             public void onSuccess(DocumentReference documentReference) {
                 // after the data addition is successful
                 // we are displaying a success toast message.
-                Toasty.success(Registration2Activity.this, "Your Course has been added to Firebase Firestore", Toast.LENGTH_SHORT).show();
+                Toasty.success(Registration2Activity.this, "Your details has been added", Toast.LENGTH_SHORT).show();
 //navigate another page
                 startActivity(new Intent(Registration2Activity.this, Registration3Activity.class));
                 finish();
