@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.mad.divamp.R;
@@ -18,6 +19,8 @@ import com.mad.divamp.location.registration.Registration2Activity;
 import com.mad.divamp.utils.SHA256;
 
 import java.util.regex.Pattern;
+
+import es.dmoral.toasty.Toasty;
 
 public class Register1Activity extends AppCompatActivity {
 
@@ -74,7 +77,15 @@ public class Register1Activity extends AppCompatActivity {
                     firstNameEt.setError("Please enter First Name");
                 } else if (TextUtils.isEmpty(lastName)) {
                     lastNameEt.setError("Please enter Last Name");
-                }else if (TextUtils.isEmpty(password)) {
+                }else if(TextUtils.isEmpty(birthday)){
+                    birthdayEt.setError("Please Enter Birthday");
+                }else if(TextUtils.isEmpty(nic)){
+                    nicEt.setError("Please Enter Birthday");
+                }else if (gender.equals("Gender")) {
+                    //error for spinner
+                    Toasty.success(Register1Activity.this, "Please select Gender", Toast.LENGTH_SHORT).show();
+                }
+                else if (TextUtils.isEmpty(password)) {
                     passwordEt.setError("Please enter Password");
                 }else if (!PASSWORD_PATTERN.matcher(password).matches()) {
                     passwordEt.setError("Password should have  at least 1 special character,no white spaces,at least 6 characters");

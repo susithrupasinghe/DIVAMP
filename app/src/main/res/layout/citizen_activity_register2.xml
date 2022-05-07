@@ -53,25 +53,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
-        android:layout_marginBottom="75dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/ic_citizen_button_back"
         android:foreground="@drawable/ic_citizen_button_back"
         android:text=""
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/address2"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/reg2_finish_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="60dp"
-        android:layout_marginBottom="75dp"
         android:background="@drawable/ic_citizen_button_finish"
         android:foreground="@drawable/ic_citizen_button_finish"
         android:text=""
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/address2"
         tools:ignore="SpeakableTextPresentCheck" />
 
     <EditText
@@ -87,7 +87,7 @@
         android:minHeight="48dp"
         android:paddingLeft="30dp"
         android:paddingRight="30dp"
-        android:text="@string/citizen_reg_email"
+        android:hint="@string/citizen_reg_email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView11" />
@@ -105,7 +105,7 @@
         android:minHeight="48dp"
         android:paddingLeft="30dp"
         android:paddingRight="30dp"
-        android:text="@string/citizen_reg_contact_no"
+        android:hint="@string/citizen_reg_contact_no"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/Email" />
@@ -123,7 +123,7 @@
         android:minHeight="48dp"
         android:paddingLeft="30dp"
         android:paddingRight="30dp"
-        android:text="@string/citizen_reg_address_line_1"
+        android:hint="@string/citizen_reg_address_line_1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/district" />
@@ -141,7 +141,7 @@
         android:minHeight="48dp"
         android:paddingLeft="30dp"
         android:paddingRight="30dp"
-        android:text="@string/citizen_reg_address_line_1"
+        android:hint="@string/citizen_reg_address_line_2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
