@@ -7,7 +7,7 @@ import android.os.Bundle;
 import com.mad.divamp.R;
 
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.mad.divamp.location.Registration;
+import com.mad.divamp.location.registration.Registration1Activity;
 
 import android.view.View;
 import android.widget.Button;
@@ -60,7 +60,7 @@ public class LogIn1Activity extends AppCompatActivity {
 
     public void registration(){
         //navigate another page
-        startActivity(new Intent(LogIn1Activity.this, Registration.class));
+        startActivity(new Intent(LogIn1Activity.this, Registration1Activity.class));
         finish();
     }
 }
