@@ -21,6 +21,7 @@
             android:layout_gravity="center">
 
             <LinearLayout
+                android:id="@+id/topCard"
                 android:layout_width="343dp"
                 android:layout_height="275dp"
                 android:background="@drawable/cardview_background"
@@ -28,14 +29,15 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" >
+                app:layout_constraintTop_toTopOf="parent">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/firstRow"
                     android:layout_width="match_parent"
-                    android:layout_height="98dp">
+                    android:layout_height="56dp">
 
                     <EditText
-                        android:id="@+id/editTextTextPassword2"
+                        android:id="@+id/nicSearch"
                         android:layout_width="244dp"
                         android:layout_height="33dp"
                         android:layout_marginStart="16dp"
@@ -43,7 +45,6 @@
                         android:background="@drawable/ic_input"
                         android:ems="10"
                         android:hint="NIC"
-                        android:inputType="textPassword"
                         android:paddingLeft="20dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
@@ -51,7 +52,7 @@
                         app:layout_constraintVertical_bias="0.418" />
 
                     <ImageButton
-                        android:id="@+id/imageButton"
+                        android:id="@+id/searchbtn"
                         android:layout_width="47dp"
                         android:layout_height="47dp"
                         android:layout_marginTop="10dp"
@@ -61,10 +62,116 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.625"
-                        app:layout_constraintStart_toEndOf="@+id/editTextTextPassword2"
+                        app:layout_constraintStart_toEndOf="@+id/nicSearch"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.39" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/secondRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="67dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/profileimg_infected"
+                        android:layout_width="114dp"
+                        android:layout_height="66dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:src="@tools:sample/avatars" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="229dp"
+                        android:layout_height="61dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/profileimg_infected"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/infection_user_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="34dp"
+                                android:gravity="center|left"
+                                android:text="TextView"
+                                android:textColor="#000000"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                tools:text="Susith Rupasinghe" />
+
+                            <TextView
+                                android:id="@+id/infection_user_nic"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="200013400692"
+                                android:textColor="#020202"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/thirdrow"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/infected_age"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center|left"
+                        android:text="Age :  None"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.195"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/last_vaccinated_date_inf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:gravity="center|left"
+                        android:text="Last Vaccinated Date : None"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/infected_age"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/user_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="64dp"
+                        android:gravity="center|left"
+                        android:text="Current Status : None"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/last_vaccinated_date_inf"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <Button
+                        android:id="@+id/markasinfected"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/btn_primary"
+                        android:text="Marks as Infected"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/user_status" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
