@@ -24,7 +24,7 @@ import es.dmoral.toasty.Toasty;
 
 public class Registration2Activity extends AppCompatActivity {
 
-    String NIC,fullName,contactNo,email;
+    String NIC,fullName,contactNo,email,image;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     Spinner categoryId;
@@ -66,28 +66,40 @@ public class Registration2Activity extends AppCompatActivity {
                 contactNo = contactNoEtd.getText().toString();
                 email = emailEtd.getText().toString();
 
+                String Expn =
+                        "^(([\\w-]+\\.)+[\\w-]+|([a-zA-Z]{1}|[\\w-]{2,}))@"
+                                +"((([0-1]?[0-9]{1,2}|25[0-5]|2[0-4][0-9])\\.([0-1]?"
+                                +"[0-9]{1,2}|25[0-5]|2[0-4][0-9])\\."
+                                +"([0-1]?[0-9]{1,2}|25[0-5]|2[0-4][0-9])\\.([0-1]?"
+                                +"[0-9]{1,2}|25[0-5]|2[0-4][0-9])){1}|"
+                                +"([a-zA-Z]+[\\w-]+\\.)+[a-zA-Z]{2,4})$";
+
                 // validating the text fields if empty or not.
                 if (TextUtils.isEmpty(NIC)) {
                     NICEtd.setError("Please enter NIC");
-                } else if (TextUtils.isEmpty(fullName)) {
+                } else if(!(NIC.trim().matches("^([0-9]{9}[x|X|v|V]|[0-9]{12})$"))) {
+                    NICEtd.setError("Please enter valid NIC");
+                }else if (TextUtils.isEmpty(fullName)) {
                     fullNameEtd.setError("Please enter full name");
                 } else if (TextUtils.isEmpty(email)) {
                     emailEtd.setError("Please enter E-mail");
-                } else if (TextUtils.isEmpty(contactNo)) {
+                } else if (!email.matches(Expn) && email.length() > 0) {
+                    emailEtd.setError("Please enter valid email");
+                }else if (TextUtils.isEmpty(contactNo)) {
                     contactNoEtd.setError("Please enter contact number");
                 } else {
                     // calling method to add data to Firebase Firestore.
-                    addData(Location_name,category,Address_1,Address_2,NIC, fullName, contactNo,password,email);
+                    addData(Location_name,category,Address_1,Address_2,NIC, fullName, contactNo,password,email,image);
                 }
             }
         });
     }
 
-    private void addData(String Location_name,String category, String Address_1, String Address_2, String NIC, String fullName, String contactNo, String password,String email){
+    private void addData(String Location_name,String category, String Address_1, String Address_2, String NIC, String fullName, String contactNo, String password,String email,String image){
 
         CollectionReference dbLocation = db.collection("location");
 
-        location location = new location(Location_name,category,Address_1,Address_2,NIC, fullName, contactNo,password,email);
+        location location = new location(Location_name,category,Address_1,Address_2,NIC, fullName, contactNo,password,email,image);
 
         dbLocation.add(location).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
             @Override

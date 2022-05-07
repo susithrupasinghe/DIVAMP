@@ -35,15 +35,17 @@
         <activity
             android:name=".location.registration.Registration1Activity"
             android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".location.logIn.LogIn1Activity"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".location.logIn.LogIn1Activity"
-            android:exported="true" />
         <activity
             android:name=".citizen.CitizenMainActivity"
             android:exported="true"
@@ -71,9 +73,6 @@
             android:name=".admin.AdminLoginActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity
-            android:name=".location.Registration_3"
-            android:exported="false" />
         <activity
             android:name=".SplashScreenActivity"
             android:exported="true" />
