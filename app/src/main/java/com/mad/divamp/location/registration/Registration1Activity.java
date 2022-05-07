@@ -13,11 +13,21 @@ import android.widget.Spinner;
 
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.mad.divamp.R;
+import com.mad.divamp.utils.SHA256;
+
+import java.util.regex.Pattern;
 
 public class Registration1Activity extends AppCompatActivity {
 
+    private static final Pattern PASSWORD_PATTERN =
+            Pattern.compile("^" +
+                    "(?=.*[@#$%^&+=])" +     // at least 1 special character
+                    "(?=\\S+$)" +            // no white spaces
+                    ".{6,}" +                // at least 6 characters
+                    "$");
+
     Spinner categoryId;
-    String strLocation_name,strCategory,strAddress_1,strAddress_2,strPassword,strPasswordReEnter;
+    String strLocation_name,strCategory,strAddress_1,strAddress_2,strPassword,strPasswordReEnter,hashPassword;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     EditText location_name,Address_1,Address_2,password,passwordReEnter;
     Button btn;
@@ -54,6 +64,8 @@ public class Registration1Activity extends AppCompatActivity {
                 strPassword = password.getText().toString();
                 strPasswordReEnter = passwordReEnter.getText().toString();
 
+                hashPassword = SHA256.getHash(strPassword);
+
                 // validating the text fields if empty or not.
                if (TextUtils.isEmpty(strLocation_name)) {
                     location_name.setError("Please enter Location Name");
@@ -61,8 +73,9 @@ public class Registration1Activity extends AppCompatActivity {
                     Address_1.setError("Please enter Address line 1");
                 }else if (TextUtils.isEmpty(strPassword)) {
                     password.setError("Please enter Password");
-                }
-                else if(!strPassword.equals(strPasswordReEnter)){
+                }else if (!PASSWORD_PATTERN.matcher(strPassword).matches()) {
+                   password.setError("Password is too weak");
+               }else if(!strPassword.equals(strPasswordReEnter)){
                     passwordReEnter.setError("Password and Confirm Password do not match");
                 }
                 else {
@@ -81,7 +94,7 @@ public class Registration1Activity extends AppCompatActivity {
         intent.putExtra("category",strCategory);
         intent.putExtra("address_1",strAddress_1);
         intent.putExtra("address_2",strAddress_2);
-        intent.putExtra("password",strPassword);
+        intent.putExtra("password",hashPassword);
         // starting the activity by passing the intent
         // to it.
         startActivity(intent);
