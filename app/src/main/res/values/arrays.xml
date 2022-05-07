@@ -5,4 +5,8 @@
         <item>Book Shop</item>
         <item>Hotel And Restaurant</item>
     </string-array>
+    <string-array name="gender">
+        <item>male</item>
+        <item>female</item>
+    </string-array>
 </resources>
