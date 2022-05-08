@@ -41,6 +41,8 @@ public class StatusFragment extends Fragment {
         binding = CitizenStatusFragmentBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
+        updateStatus("dwqd","idqw");
+
 //        final TextView textView = binding.textHome;
 //        homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
