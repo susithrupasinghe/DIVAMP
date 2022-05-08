@@ -68,10 +68,12 @@ public class HomeFragment extends Fragment {
         binding = null;
     }
 
+
+
     private void RenderRecyclerView(RecyclerView recyclerView, String NIC){
 
 
-        db.collection("")
+        db.collection("vaccines")
                 .whereEqualTo("NIC", NIC)
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
@@ -87,12 +89,11 @@ public class HomeFragment extends Fragment {
                             for (QueryDocumentSnapshot document : task.getResult()) {
                                 cardItem Card = new cardItem();
 
-                                Card.setImgUrl(document.get("locationImg").toString());
-                                Card.setTitle(document.get("locationName").toString());
+                                Card.setImgUrl(document.get("VaccineImg").toString());
+                                Card.setTitle(document.get("BatchId").toString());
+                                Card.setRow1(document.get("Center").toString());
+                                Card.setRow1(document.get("timestamp").toString());
 
-                                Timestamp ts=new Timestamp(Long.parseLong(document.get("time").toString()));
-                                Card.setRow1("Marked Date : " );
-                                Card.setRow2("Marked Time : " );
                                 myCardList[i] = Card;
                                 i++;
 
@@ -106,7 +107,7 @@ public class HomeFragment extends Fragment {
 
                         } else {
 
-                            Toasty.error(getActivity(), " Data retrieval faild", Toast.LENGTH_SHORT, true).show();
+                            Toasty.error(getActivity(), " Data retrieval failed", Toast.LENGTH_SHORT, true).show();
                         }
                     }
                 });
