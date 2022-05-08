@@ -68,11 +68,7 @@ public class HomeFragment extends Fragment {
         binding = null;
     }
 
-
-
     private void RenderRecyclerView(RecyclerView recyclerView, String NIC){
-
-
         db.collection("vaccines")
                 .whereEqualTo("NIC", NIC)
                 .get()
@@ -80,7 +76,6 @@ public class HomeFragment extends Fragment {
                     @Override
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         if (task.isSuccessful()) {
-
                             if(task.getResult().size() == 0){
                                 Toasty.error(getActivity(), " Data size 0", Toast.LENGTH_SHORT, true).show();
                             }
@@ -88,25 +83,19 @@ public class HomeFragment extends Fragment {
                             int i=0;
                             for (QueryDocumentSnapshot document : task.getResult()) {
                                 cardItem Card = new cardItem();
-
                                 Card.setImgUrl(document.get("VaccineImg").toString());
                                 Card.setTitle(document.get("BatchId").toString());
                                 Card.setRow1(document.get("Center").toString());
                                 Card.setRow1(document.get("timestamp").toString());
-
                                 myCardList[i] = Card;
                                 i++;
-
                             }
                             RecyclerViewAdapter adapter = new RecyclerViewAdapter(myCardList);
                             recyclerView.setHasFixedSize(true);
                             recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
                             recyclerView.setAdapter(adapter);
                             Toasty.error(getActivity(), " added to recycler view", Toast.LENGTH_SHORT, true).show();
-
-
                         } else {
-
                             Toasty.error(getActivity(), " Data retrieval failed", Toast.LENGTH_SHORT, true).show();
                         }
                     }

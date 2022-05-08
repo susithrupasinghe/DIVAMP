@@ -41,6 +41,8 @@ public class SettingsFragment extends Fragment {
         binding = CitizenSettingsFragmentBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
+        deleteAccount("6453");
+
 //        final TextView textView = binding.textHome;
 //        homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;

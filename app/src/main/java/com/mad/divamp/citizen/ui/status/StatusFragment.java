@@ -53,7 +53,6 @@ public class StatusFragment extends Fragment {
     }
 
     private  void updateStatus(String nic,String status){
-
         db.collection("citizen")
                 .whereEqualTo("nic",nic)
                 .get()
@@ -71,11 +70,9 @@ public class StatusFragment extends Fragment {
                         }
                         else{
                             Toasty.error(getActivity(), " Data retrieval failed", Toast.LENGTH_SHORT, true).show();
-
                         }
                     }
                 });
-
         try {
             db.collection("citizen").document(globalRefId).update("status",status);
             Toasty.success(getActivity(), "Status updated successfully", Toast.LENGTH_SHORT, true).show();
