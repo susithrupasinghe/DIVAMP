@@ -9,21 +9,284 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/ic_admin_registration_background"
         tools:context=".admin.ui.history.HistoryFragment">
 
-        <TextView
-            android:id="@+id/text_registration"
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:visibility="visible"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
-            android:textAlignment="center"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp">
+
+                <TextView
+                    android:id="@+id/textView26"
+                    android:layout_width="261dp"
+                    android:layout_height="80dp"
+                    android:gravity="center"
+                    android:text="Vaccine Center Registration"
+                    android:textColor="#000000"
+                    android:textSize="28dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <com.anton46.stepsview.StepsView
+                android:id="@+id/stepsViewAdmin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent">
+
+            </com.anton46.stepsview.StepsView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/admin_reg_page_1_inputs"
+                android:layout_width="match_parent"
+                android:layout_height="380dp"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/admin_page_1_email"
+                    android:layout_width="334dp"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="56dp"
+                    android:background="@drawable/ic_input"
+                    android:ems="10"
+                    android:hint="Email"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="30dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.497"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/admin_page_1_center_name"
+                    android:layout_width="334dp"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/ic_input"
+                    android:ems="10"
+                    android:hint="Center Name"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="30dp"
+                    app:layout_constraintStart_toStartOf="@+id/admin_page_1_email"
+                    app:layout_constraintTop_toBottomOf="@+id/admin_page_1_email" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="337dp"
+                    android:layout_height="66dp"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.54"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/admin_page_1_center_name">
+
+                    <Spinner
+                        android:id="@+id/admin_page_1_spinnerProvince"
+                        android:layout_width="158dp"
+                        android:layout_height="46dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@drawable/ic_spinner_background"
+                        android:entries="@array/province"
+                        android:paddingLeft="20dp"
+                        android:spinnerMode="dialog" />
+
+                    <Spinner
+                        android:id="@+id/admin_page_1_spinnerDistrict"
+                        android:layout_width="158dp"
+                        android:layout_height="46dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/ic_spinner_background"
+                        android:entries="@array/district"
+                        android:paddingLeft="20dp"
+                        android:spinnerMode="dialog" />
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/admin_page_1_password"
+                    android:layout_width="334dp"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/ic_input"
+                    android:ems="10"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:paddingLeft="20dp"
+                    app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+                    app:layout_constraintStart_toStartOf="@+id/linearLayout"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+                <EditText
+                    android:id="@+id/admin_page_1_re_password"
+                    android:layout_width="334dp"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/ic_input"
+                    android:ems="10"
+                    android:hint="Password Re-type"
+                    android:inputType="textPassword"
+                    android:paddingLeft="20dp"
+                    app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="@+id/linearLayout"
+                    app:layout_constraintTop_toBottomOf="@+id/admin_page_1_password" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/admin_reg_page_1_buttonset"
+                android:layout_width="match_parent"
+                android:layout_height="159dp"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/admin_reg_next_btn_1"
+                    android:layout_width="175dp"
+                    android:layout_height="49dp"
+                    android:background="@drawable/btn_primary"
+                    android:text="Next"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.872"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.15" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/admin_reg_page_2_inputs"
+                android:layout_width="match_parent"
+                android:layout_height="386dp"
+                android:visibility="visible">
+
+                <EditText
+                    android:id="@+id/admin_page_2_NIC"
+                    android:layout_width="334dp"
+                    android:layout_height="42dp"
+                    android:layout_marginTop="56dp"
+                    android:background="@drawable/ic_input"
+                    android:ems="10"
+                    android:hint="Incharge NIC"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="30dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.497"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/admin_page_2_full_name"
+                    android:layout_width="334dp"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/ic_input"
+                    android:ems="10"
+                    android:hint="Incharge Full Name"
+                    android:inputType="textPersonName"
+                    android:paddingLeft="30dp"
+
+                    app:layout_constraintStart_toStartOf="@+id/admin_page_2_NIC"
+                    app:layout_constraintTop_toBottomOf="@+id/admin_page_2_NIC" />
+
+                <EditText
+                    android:id="@+id/admin_page_2_contact_no"
+                    android:layout_width="334dp"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/ic_input"
+                    android:ems="10"
+                    android:hint="Contact No"
+                    android:paddingLeft="20dp"
+                    app:layout_constraintStart_toStartOf="@+id/admin_page_2_full_name"
+                    app:layout_constraintTop_toBottomOf="@+id/admin_page_2_full_name" />
+
+                <EditText
+                    android:id="@+id/admin_page_2_incharge_email"
+                    android:layout_width="334dp"
+                    android:layout_height="46dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/ic_input"
+                    android:ems="10"
+                    android:hint="Email"
+                    android:paddingLeft="20dp"
+                    app:layout_constraintEnd_toEndOf="@+id/admin_page_2_contact_no"
+                    app:layout_constraintStart_toStartOf="@+id/admin_page_2_contact_no"
+                    app:layout_constraintTop_toBottomOf="@+id/admin_page_2_contact_no" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/admin_reg_page_2_buttonset"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible">
+
+                <Button
+                    android:id="@+id/admin_reg_next_btn_2"
+                    android:layout_width="175dp"
+                    android:layout_height="49dp"
+                    android:background="@drawable/btn_primary"
+                    android:text="Finish"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.872"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.15" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/admin_reg_page_3_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="408dp"
+                    android:layout_height="217dp"
+                    android:src="@drawable/ic_admin_reg_last_page_img_last"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.551"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.184"
+                    tools:visibility="visible" />
+
+                <Button
+                    android:id="@+id/admin_reg_next_btn_3"
+                    android:layout_width="175dp"
+                    android:layout_height="49dp"
+                    android:background="@drawable/btn_primary"
+                    android:text="Add Another"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.932"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageView6"
+                    app:layout_constraintVertical_bias="0.356" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>
