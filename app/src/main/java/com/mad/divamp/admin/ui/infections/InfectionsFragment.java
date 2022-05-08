@@ -119,9 +119,12 @@ public class InfectionsFragment extends Fragment {
         catch (Exception ex){
             Toasty.error(getActivity(), "Update process faild", Toast.LENGTH_SHORT, true).show();
         }
+
+
+
+
+
     }
-
-
     private void RenderUserDetails(String NIC){
 
         db.collection("citizen")
@@ -166,16 +169,26 @@ public class InfectionsFragment extends Fragment {
                                 catch (Exception Ex){
                                     Toasty.error(getActivity(), Ex.getMessage(), Toast.LENGTH_LONG, true).show();
                                 }
+
+
+
                             }
+
+
+
                         } else {
 
                             Toasty.error(getActivity(), " Data retrieval faild", Toast.LENGTH_SHORT, true).show();
                         }
                     }
                 });
+
+
     }
 
     private void RenderRecyclerView(RecyclerView recyclerView, String NIC){
+
+
         db.collection("visits")
                 .whereEqualTo("NIC", NIC)
                 .get()
@@ -183,6 +196,8 @@ public class InfectionsFragment extends Fragment {
                     @Override
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         if (task.isSuccessful()) {
+
+
                             cardItem[] myCardList = new cardItem[task.getResult().size()];
                             int i=0;
                             for (QueryDocumentSnapshot document : task.getResult()) {
@@ -196,15 +211,20 @@ public class InfectionsFragment extends Fragment {
                                 Card.setRow2("Marked Time : " + sdf2.format(ts));
                                 myCardList[i] = Card;
                                 i++;
+
                             }
                             RecyclerViewAdapter adapter = new RecyclerViewAdapter(myCardList);
                             recyclerView.setHasFixedSize(true);
                             recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
                             recyclerView.setAdapter(adapter);
+
                         } else {
+
                             Toasty.error(getActivity(), " Data retrieval faild", Toast.LENGTH_SHORT, true).show();
                         }
                     }
                 });
+
+
     }
 }
