@@ -28,6 +28,10 @@
         <item>North Western Province</item>
     </string-array>
 
+    <string-array name="district">
+        <item>District</item>
+    </string-array>
+
     <string-array name="western">
         <item>Colombo</item>
         <item>Gampaha</item>
