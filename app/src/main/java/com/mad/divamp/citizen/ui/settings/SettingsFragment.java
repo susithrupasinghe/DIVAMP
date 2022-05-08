@@ -53,12 +53,8 @@ public class SettingsFragment extends Fragment {
         super.onDestroyView();
         binding = null;
     }
-
     private  void deleteAccount(String nic){
-
-        db.collection("citizen")
-                .whereEqualTo("nic",nic)
-                .get()
+        db.collection("citizen").whereEqualTo("nic",nic).get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
@@ -75,7 +71,6 @@ public class SettingsFragment extends Fragment {
                         }
                     }
                 });
-
         try {
             db.collection("citizen").document(globalRefId).delete();
             Toasty.success(getActivity(), "Account deleted Successfully", Toast.LENGTH_SHORT, true).show();
