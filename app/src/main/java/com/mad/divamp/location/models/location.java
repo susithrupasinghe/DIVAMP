@@ -4,6 +4,19 @@ public class location {
 
     private String email,Location_name,NIC,fullName,contactNo,category,Address_1,Address_2,password,image;
 
+    public location(String Location_name, String category, String Address_1, String Address_2, String NIC, String fullName, String contactNo, String password, String email, String image){
+        this.email=email;
+        this.Location_name = Location_name;
+        this.category = category;
+        this.Address_1=Address_1;
+        this.Address_2 = Address_2;
+        this.NIC = NIC;
+        this.fullName = fullName;
+        this.contactNo = contactNo;
+        this.password = password;
+        this.image=image;
+    }
+
     public location() {
         // empty constructor
         // required for Firebase.
@@ -65,18 +78,7 @@ public class location {
         this.image = image;
     }
 
-    public location(String Location_name, String category, String Address_1, String Address_2, String NIC, String fullName, String contactNo, String password, String email, String image){
-        this.email=email;
-        this.Location_name = Location_name;
-        this.category = category;
-        this.Address_1=Address_1;
-        this.Address_2 = Address_2;
-        this.NIC = NIC;
-        this.fullName = fullName;
-        this.contactNo = contactNo;
-        this.password = password;
-        this.image=image;
-    }
+
 
     public String getNIC() {
         return NIC;

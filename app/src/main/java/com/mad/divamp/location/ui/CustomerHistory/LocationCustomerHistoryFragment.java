@@ -46,9 +46,6 @@ public class LocationCustomerHistoryFragment extends Fragment {
         View root = binding.getRoot();
 
         RenderRecyclerView(binding.historyRecyclerView,"shavidilunika10s@gmail.com");
-
-//        final TextView textView = binding.textGallery;
-//        galleryViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 
@@ -77,22 +74,19 @@ public class LocationCustomerHistoryFragment extends Fragment {
 
                                 Card.setImgUrl(document.get("locationImg").toString());
                                 Card.setTitle(document.get("Name").toString());
+                                Card.setRow3(document.get("telePhone").toString());
 
                                 Timestamp ts=new Timestamp(Long.parseLong(document.get("DateTime").toString()));
                                 Card.setRow1( sdf1.format(ts));
                                 Card.setRow2("Date & Time : " + sdf2.format(ts));
                                 myCardList[i] = Card;
                                 i++;
-
                             }
                             LocationRecyclerViewAdapter adapter = new LocationRecyclerViewAdapter(myCardList);
                             recyclerView.setHasFixedSize(true);
                             recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
                             recyclerView.setAdapter(adapter);
-
-
                         } else {
-
                             Toasty.error(getActivity(), " Data retrieval faild", Toast.LENGTH_SHORT, true).show();
                         }
                     }
