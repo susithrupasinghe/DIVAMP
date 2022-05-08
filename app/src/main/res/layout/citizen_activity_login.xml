@@ -20,7 +20,7 @@
         app:srcCompat="@drawable/ic_citizen_login_picture" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/loginLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="124dp"
@@ -33,7 +33,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/passwordLogin" />
 
     <TextView
         android:id="@+id/textView"
@@ -76,7 +76,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/registerLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="124dp"
@@ -103,17 +103,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/loginLogin" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/passwordLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:background="@drawable/ic_password"
+        android:background="@drawable/ic_citizen_input_big"
         android:ems="10"
         android:fontFamily="@font/abhaya_libre_extrabold"
-        android:hint="@string/Password"
+        android:hint="@string/citizen_login_password"
         android:inputType="textPassword"
         android:minHeight="48dp"
         android:paddingLeft="30dp"
@@ -123,21 +123,21 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.466"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+        app:layout_constraintTop_toBottomOf="@+id/nicLogin" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/nicLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="400dp"
         android:background="@drawable/ic_email"
         android:ems="10"
         android:fontFamily="@font/abhaya_libre_extrabold"
-        android:inputType="textEmailAddress"
+        android:hint="@string/citizen_login_nic"
+        android:inputType="text"
         android:minHeight="48dp"
         android:paddingLeft="30dp"
         android:paddingRight="30dp"
-        android:text="@string/citizen_login_nic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.466"
         app:layout_constraintStart_toStartOf="parent"
