@@ -40,6 +40,7 @@ public class RegistrationFragment extends Fragment {
         View root = binding.getRoot();
 
         final TextView textView = binding.textRegistration;
+        insertVaccinationCenter(null,null,null,null, null, null,null,null);
         registrationViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
@@ -68,17 +69,14 @@ public class RegistrationFragment extends Fragment {
             @Override
             public void onSuccess(DocumentReference documentReference) {
 
-
                 Toasty.success(getActivity(), "Vaccination center registration successful", Toast.LENGTH_LONG, true).show();
 
             }
-        })
-                .addOnFailureListener(new OnFailureListener() {
+        }).addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
                         Toasty.error(getActivity(), "Vaccination center registration failed", Toast.LENGTH_LONG, true).show();
                     }
                 });
-
     }
 }
