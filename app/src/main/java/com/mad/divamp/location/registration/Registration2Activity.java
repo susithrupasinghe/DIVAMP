@@ -24,7 +24,7 @@ import es.dmoral.toasty.Toasty;
 
 public class Registration2Activity extends AppCompatActivity {
 
-    String NIC,fullName,contactNo,email,image;
+    String NIC,fullName,contactNo,email,image,status;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
 
     Spinner categoryId;
@@ -65,6 +65,8 @@ public class Registration2Activity extends AppCompatActivity {
                 fullName = fullNameEtd.getText().toString();
                 contactNo = contactNoEtd.getText().toString();
                 email = emailEtd.getText().toString();
+                image = toString();
+                status = toString();
 
                 String Expn =
                         "^(([\\w-]+\\.)+[\\w-]+|([a-zA-Z]{1}|[\\w-]{2,}))@"
@@ -89,17 +91,17 @@ public class Registration2Activity extends AppCompatActivity {
                     contactNoEtd.setError("Please enter contact number");
                 } else {
                     // calling method to add data to Firebase Firestore.
-                    addData(Location_name,category,Address_1,Address_2,NIC, fullName, contactNo,password,email,image);
+                    addData(Location_name,category,Address_1,Address_2,NIC, fullName, contactNo,password,email,image,status);
                 }
             }
         });
     }
 
-    private void addData(String Location_name,String category, String Address_1, String Address_2, String NIC, String fullName, String contactNo, String password,String email,String image){
+    private void addData(String Location_name,String category, String Address_1, String Address_2, String NIC, String fullName, String contactNo, String password,String email,String image,String status){
 
         CollectionReference dbLocation = db.collection("location");
 
-        location location = new location(Location_name,category,Address_1,Address_2,NIC, fullName, contactNo,password,email,image);
+        location location = new location(Location_name,category,Address_1,Address_2,NIC, fullName, contactNo,password,email,image,status);
 
         dbLocation.add(location).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
             @Override

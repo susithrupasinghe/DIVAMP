@@ -71,12 +71,10 @@ public class SettingsFragment extends Fragment {
 
         try {
             db.collection("location").document(globalrefId).delete();
-//            db.collection("citizen").document(globalrefId).update("status","Infected");
-            Toasty.success(getActivity(), "Status Updated as Infected Succusfully", Toast.LENGTH_SHORT, true).show();
-//            RenderUserDetails(NIC);
+            Toasty.success(getActivity(), "Status Delete Successfully", Toast.LENGTH_SHORT, true).show();
         }
         catch (Exception ex){
-            Toasty.error(getActivity(), "Update process faild", Toast.LENGTH_SHORT, true).show();
+            Toasty.error(getActivity(), "Delete process failed", Toast.LENGTH_SHORT, true).show();
         }
     }
 }

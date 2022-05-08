@@ -53,9 +53,7 @@ public class VaccineRecyclerViewAdapter extends RecyclerView.Adapter<VaccineRecy
                 db.collection("vaccines").document(listdata[position].getDocumentId()).delete().addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
-
                         Toasty.success(view.getContext(), "Vaccine delete successful", Toast.LENGTH_SHORT, true).show();
-
                     }
                 })
                         .addOnFailureListener(new OnFailureListener() {

@@ -10,12 +10,16 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.mad.divamp.R;
+import com.mad.divamp.citizen.userManagement.Register1Activity;
 import com.mad.divamp.utils.SHA256;
 
 import java.util.regex.Pattern;
+
+import es.dmoral.toasty.Toasty;
 
 public class Registration1Activity extends AppCompatActivity {
 
@@ -75,6 +79,9 @@ public class Registration1Activity extends AppCompatActivity {
                     password.setError("Please enter Password");
                 }else if (!PASSWORD_PATTERN.matcher(strPassword).matches()) {
                    password.setError("Password is too weak");
+               }else if (strCategory.equals("Category")) {
+                   //error for spinner
+                   Toasty.success(Registration1Activity.this, "Please select Category", Toast.LENGTH_SHORT).show();
                }else if(!strPassword.equals(strPasswordReEnter)){
                     passwordReEnter.setError("Password and Confirm Password do not match");
                 }
