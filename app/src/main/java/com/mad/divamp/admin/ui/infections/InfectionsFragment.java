@@ -92,14 +92,11 @@ public class InfectionsFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                UpdateInfectiedUser(NIC.getText().toString());
+                UpdateInfectedUser(NIC.getText().toString());
 
             }
         });
 
-
-//        final TextView textView = binding.textGallery;
-//        galleryViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
     }
 
@@ -109,20 +106,16 @@ public class InfectionsFragment extends Fragment {
         binding = null;
     }
 
-    private  void UpdateInfectiedUser(String NIC){
+    private  void UpdateInfectedUser(String NIC){
 
         try {
             db.collection("citizen").document(globalrefId).update("status","Infected");
-            Toasty.success(getActivity(), "Status Updated as Infected Succusfully", Toast.LENGTH_SHORT, true).show();
+            Toasty.success(getActivity(), "Status Updated as Infected Successfully", Toast.LENGTH_SHORT, true).show();
             RenderUserDetails(NIC);
         }
         catch (Exception ex){
-            Toasty.error(getActivity(), "Update process faild", Toast.LENGTH_SHORT, true).show();
+            Toasty.error(getActivity(), "Update process failed", Toast.LENGTH_SHORT, true).show();
         }
-
-
-
-
 
     }
     private void RenderUserDetails(String NIC){
@@ -138,7 +131,7 @@ public class InfectionsFragment extends Fragment {
 
                             if(task.getResult().size() == 0){
 
-                                Toasty.error(getActivity(), "Please input correct NIC", Toast.LENGTH_SHORT, true).show();
+                                Toasty.info(getActivity(), "We cannot find your NIC", Toast.LENGTH_SHORT, true).show();
                             }
 
                             for (QueryDocumentSnapshot document : task.getResult()) {
@@ -169,16 +162,10 @@ public class InfectionsFragment extends Fragment {
                                 catch (Exception Ex){
                                     Toasty.error(getActivity(), Ex.getMessage(), Toast.LENGTH_LONG, true).show();
                                 }
-
-
-
                             }
-
-
-
                         } else {
 
-                            Toasty.error(getActivity(), " Data retrieval faild", Toast.LENGTH_SHORT, true).show();
+                            Toasty.error(getActivity(), " Data retrieval failed", Toast.LENGTH_SHORT, true).show();
                         }
                     }
                 });
@@ -196,7 +183,6 @@ public class InfectionsFragment extends Fragment {
                     @Override
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         if (task.isSuccessful()) {
-
 
                             cardItem[] myCardList = new cardItem[task.getResult().size()];
                             int i=0;
@@ -220,7 +206,7 @@ public class InfectionsFragment extends Fragment {
 
                         } else {
 
-                            Toasty.error(getActivity(), " Data retrieval faild", Toast.LENGTH_SHORT, true).show();
+                            Toasty.error(getActivity(), " Data retrieval failed", Toast.LENGTH_SHORT, true).show();
                         }
                     }
                 });
