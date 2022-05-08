@@ -8,4 +8,5 @@
     <color name="light_green">#64B401</color>
     <color name="light_blue">#92D7FF</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="inactive">#A3AC98</color>
 </resources>
