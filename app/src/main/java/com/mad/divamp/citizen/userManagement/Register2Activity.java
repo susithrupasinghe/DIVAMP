@@ -138,7 +138,9 @@ public class Register2Activity extends AppCompatActivity {
                          String nic,String birthday,String gender,String hashPassword
                          ){
         CollectionReference dbCitizen = db.collection("citizen");
-        Citizen citizen = new Citizen(email,contactNo,province,district,address1,address2,firstName,lastName,nic,birthday,gender,hashPassword);
+        //create a citizen object
+        Citizen citizen = new Citizen(email,contactNo,province,district,address1,address2,firstName,lastName,nic,birthday,
+                                        gender,hashPassword);
 
         dbCitizen.add(citizen).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
             @Override
@@ -146,7 +148,7 @@ public class Register2Activity extends AppCompatActivity {
                 // after the data addition is successful
                 // we are displaying a success toast message.
                 Toasty.success(Register2Activity.this, "Your details has been added", Toast.LENGTH_SHORT).show();
-//navigate another page
+                //navigate another page
                 startActivity(new Intent(Register2Activity.this, Register3Activity.class));
                 finish();
             }

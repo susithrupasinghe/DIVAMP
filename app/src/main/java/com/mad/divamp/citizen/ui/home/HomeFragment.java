@@ -2,6 +2,8 @@ package com.mad.divamp.citizen.ui.home;
 
 import androidx.lifecycle.ViewModelProvider;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -38,6 +40,11 @@ public class HomeFragment extends Fragment {
 
     private CitizenHomeFragmentBinding binding;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
+    SharedPreferences sharedPreferences;
+
+
+
+
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -46,7 +53,8 @@ public class HomeFragment extends Fragment {
 
         binding = CitizenHomeFragmentBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
-        RenderRecyclerView(binding.adminInfectionRecycler, "20013400692");
+        RenderRecyclerView(binding.citizenVaccineRecycler, "20013400692");
+        sharedPreferences = this.getActivity().getSharedPreferences("session", Context.MODE_PRIVATE);
 
 
 //        final TextView textView = binding.textHome;
@@ -63,7 +71,7 @@ public class HomeFragment extends Fragment {
     private void RenderRecyclerView(RecyclerView recyclerView, String NIC){
 
 
-        db.collection("visits")
+        db.collection("")
                 .whereEqualTo("NIC", NIC)
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
@@ -83,8 +91,8 @@ public class HomeFragment extends Fragment {
                                 Card.setTitle(document.get("locationName").toString());
 
                                 Timestamp ts=new Timestamp(Long.parseLong(document.get("time").toString()));
-                                Card.setRow1("Marked Date : " + sdf1.format(ts));
-                                Card.setRow2("Marked Time : " + sdf2.format(ts));
+                                Card.setRow1("Marked Date : " );
+                                Card.setRow2("Marked Time : " );
                                 myCardList[i] = Card;
                                 i++;
 
