@@ -31,19 +31,6 @@ public class HomeFragment extends Fragment {
 
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
-        btt = binding.button;
-        btt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                SharedPreferences sh = getActivity().getSharedPreferences("session", Context.MODE_PRIVATE);
-
-              //  String s1 = sh.getString("name", "");
-
-                Toasty.success(getActivity(), sh.getString("email", ""), Toast.LENGTH_SHORT, true).show();
-                // do something when the corky2 is clicked
-            }
-        });
 
 
 

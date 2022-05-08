@@ -20,7 +20,7 @@
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="201dp">
 
             <androidx.cardview.widget.CardView
 
@@ -37,12 +37,12 @@
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="363dp"
-                    android:layout_height="190dp"
+                    android:layout_height="180dp"
                     android:layout_gravity="center">
 
                     <LinearLayout
-                        android:layout_width="330dp"
-                        android:layout_height="190dp"
+                        android:layout_width="325dp"
+                        android:layout_height="173dp"
                         android:background="@drawable/cardview_background"
                         android:orientation="vertical"
                         app:layout_constraintBottom_toBottomOf="parent"
@@ -52,8 +52,9 @@
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="58dp"
-                            android:orientation="horizontal">
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingTop="10dp">
 
                             <androidx.constraintlayout.widget.ConstraintLayout
                                 android:layout_width="132dp"
@@ -95,25 +96,70 @@
 
                         </LinearLayout>
 
-                        <LinearLayout
+                        <TextView
+                            android:id="@+id/textView21"
                             android:layout_width="match_parent"
-                            android:layout_height="39dp"
-                            android:orientation="horizontal"></LinearLayout>
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Total Vaccinated Count : Loading"
+                            android:textColor="#000000"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.333"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.512" />
 
-                        <LinearLayout
+                        <TextView
+                            android:id="@+id/textView23"
                             android:layout_width="match_parent"
-                            android:layout_height="41dp"
-                            android:orientation="horizontal"></LinearLayout>
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="1st Dose Only : Loading"
+                            android:textColor="#000000"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.333"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.512" />
 
-                        <LinearLayout
+                        <TextView
+                            android:id="@+id/textView24"
                             android:layout_width="match_parent"
-                            android:layout_height="43dp"
-                            android:orientation="horizontal"></LinearLayout>
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Up to 2nd Dose : Loading"
+                            android:textColor="#000000"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.333"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.512" />
 
-                        <LinearLayout
+                        <TextView
+                            android:id="@+id/textView25"
                             android:layout_width="match_parent"
-                            android:layout_height="40dp"
-                            android:orientation="horizontal"></LinearLayout>
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Up to 3rd Dose: Loading"
+                            android:textColor="#000000"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.333"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.512" />
+
                     </LinearLayout>
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -195,29 +241,59 @@
                                     app:layout_constraintStart_toStartOf="parent"
                                     app:layout_constraintTop_toTopOf="parent"
                                     app:layout_constraintVertical_bias="0.512" />
+
                             </androidx.constraintlayout.widget.ConstraintLayout>
 
                         </LinearLayout>
 
-                        <LinearLayout
+                        <TextView
+                            android:id="@+id/textView29"
                             android:layout_width="match_parent"
-                            android:layout_height="39dp"
-                            android:orientation="horizontal"></LinearLayout>
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Total Infected Count : Loading"
+                            android:textColor="#000000"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.333"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.512" />
 
-                        <LinearLayout
+                        <TextView
+                            android:id="@+id/textView30"
                             android:layout_width="match_parent"
-                            android:layout_height="41dp"
-                            android:orientation="horizontal"></LinearLayout>
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Total Vaccinated Count : Loading"
+                            android:textColor="#000000"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.333"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.512" />
 
-                        <LinearLayout
+                        <TextView
+                            android:id="@+id/textView31"
                             android:layout_width="match_parent"
-                            android:layout_height="43dp"
-                            android:orientation="horizontal"></LinearLayout>
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Total Recovered Count : Loading"
+                            android:textColor="#000000"
+                            android:textStyle="bold"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="0.333"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_bias="0.512" />
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="40dp"
-                            android:orientation="horizontal"></LinearLayout>
                     </LinearLayout>
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -270,15 +346,15 @@
 
                                 <ImageView
                                     android:id="@+id/imageView4"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
+                                    android:layout_width="33dp"
+                                    android:layout_height="32dp"
                                     android:layout_weight="1"
                                     android:src="@drawable/ic_injection"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
                                     app:layout_constraintTop_toTopOf="parent"
-                                    app:srcCompat="@drawable/ic_infect" />
+                                    app:srcCompat="@drawable/ic_baseline_add_home_24" />
                             </androidx.constraintlayout.widget.ConstraintLayout>
 
                             <androidx.constraintlayout.widget.ConstraintLayout
@@ -291,7 +367,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
-                                    android:text="@string/infected_summery"
+                                    android:text="Vaccination Centers"
                                     android:textColor="#000000"
                                     android:textStyle="bold"
                                     app:layout_constraintBottom_toBottomOf="parent"
@@ -307,19 +383,30 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="41dp"
-                            android:orientation="horizontal"></LinearLayout>
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/textView32"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="Total Center Count : Loading"
+                                android:textColor="#000000"
+                                android:textStyle="bold"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.333"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintVertical_bias="0.512" />
+                        </LinearLayout>
 
                     </LinearLayout>
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
             </androidx.cardview.widget.CardView>
         </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <Button
-            android:id="@+id/button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Button" />
 
     </LinearLayout>
 

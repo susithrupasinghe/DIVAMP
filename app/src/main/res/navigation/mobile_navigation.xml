@@ -28,4 +28,9 @@
         android:name="com.mad.divamp.admin.ui.registration.RegistrationFragment"
         android:label="V-Center Registration"
         tools:layout="@layout/fragment_registration" />
+    <fragment
+        android:id="@+id/nav_center_list"
+        android:name="com.mad.divamp.admin.ui.centerlist.CenterListFragment"
+        android:label="Vaccination Center List"
+        tools:layout="@layout/center_list_fragment" />
 </navigation>

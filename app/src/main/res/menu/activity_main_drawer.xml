@@ -20,5 +20,9 @@
             android:id="@+id/nav_vaccine_registration"
             android:icon="@drawable/ic_baseline_account_circle_24"
             android:title="@string/vaccination_center_registration" />
+        <item
+            android:id="@+id/nav_center_list"
+            android:icon="@drawable/ic_baseline_format_list_bulleted_24"
+            android:title="Vaccination Center List" />
     </group>
 </menu>

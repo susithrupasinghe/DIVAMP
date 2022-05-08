@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.Button;
 
 import com.mad.divamp.R;
-import com.mad.divamp.location.Registration_3;
 import com.mad.divamp.location.logIn.LogIn1Activity;
 
 
