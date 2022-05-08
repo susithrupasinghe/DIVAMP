@@ -89,7 +89,6 @@ public class Registration1Activity extends AppCompatActivity {
     public void next(){
         Intent intent = new Intent(Registration1Activity.this, Registration2Activity.class);
         // passing the bundle to the intent
-
         intent.putExtra("location_name",strLocation_name);
         intent.putExtra("category",strCategory);
         intent.putExtra("address_1",strAddress_1);

@@ -11,8 +11,8 @@
         android:id="@+id/logInNow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="188dp"
-        android:layout_marginTop="540dp"
+        android:layout_marginStart="232dp"
+        android:layout_marginTop="536dp"
         android:background="@drawable/ic_login_now"
         android:foreground="@drawable/ic_login_now"
         android:text="Button"
@@ -34,8 +34,8 @@
 
     <TextView
         android:id="@+id/textView12"
-        android:layout_width="233dp"
-        android:layout_height="34dp"
+        android:layout_width="236dp"
+        android:layout_height="42dp"
         android:layout_marginStart="88dp"
         android:layout_marginTop="172dp"
         android:fontFamily="@font/yantramanav_bold"
@@ -60,11 +60,13 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="228dp"
+        android:layout_width="431dp"
+        android:layout_height="203dp"
+        android:layout_marginBottom="256dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.912"
         app:srcCompat="@drawable/ic_registration_3_back_image"
-        tools:layout_editor_absoluteX="16dp" />
+        tools:layout_editor_absoluteX="14dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -102,6 +102,9 @@ public class LogIn1Activity extends AppCompatActivity {
                                     Toasty.success(getApplicationContext(), "Success!", Toast.LENGTH_SHORT, true).show();
                                     SharedPreferences.Editor editor = sharedpreferences.edit();
 
+                                    //get data from DB
+
+
                                     editor.putString("email", email);
                                     editor.putBoolean("loggedin", true);
                                     editor.commit();
