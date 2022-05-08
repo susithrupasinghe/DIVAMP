@@ -13,13 +13,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Divamp">
         <activity
+            android:name=".center.logIn.LoginActivity"
+            android:exported="true"/>
+        <activity
             android:name=".location.registration.Registration3Activity"
             android:exported="false" />
         <activity
             android:name=".location.registration.Registration2Activity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"/>
         <activity
             android:name=".citizen.userManagement.Register3Activity"
             android:exported="false" />
@@ -35,11 +36,7 @@
         <activity
             android:name=".location.registration.Registration1Activity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".location.logIn.LogIn1Activity"
@@ -58,7 +55,11 @@
             android:name=".center.CenterMainActivity"
             android:exported="true"
             android:label="@string/title_activity_center_main"
-            android:theme="@style/Theme.Divamp.NoActionBar" />
+            android:theme="@style/Theme.Divamp.NoActionBar" ><intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+
+        <category android:name="android.intent.category.LAUNCHER" />
+    </intent-filter></activity>
         <activity
             android:name=".admin.AdminMainActivity"
             android:exported="true"
