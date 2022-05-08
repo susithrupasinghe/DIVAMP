@@ -164,7 +164,7 @@ public class RegistrationFragment extends Fragment {
                 else {
                     insertVaccinationCenter(email.getText().toString(), centerName.getText().toString(),provice.getSelectedItem().toString(),
                             district.getSelectedItem().toString(), SHA256.getHash(password.getText().toString()), inchargeNIC.getText().toString(),
-                            contactNo.getText().toString(), inchargeEmail.getText().toString());
+                            contactNo.getText().toString(), inchargeEmail.getText().toString(), inchargeFullName.getText().toString());
 
                 }
 
@@ -244,7 +244,7 @@ public class RegistrationFragment extends Fragment {
     }
 
     private void insertVaccinationCenter(String email, String CenterName, String province, String district, String password, String inchargeNIC,
-                                         String contactNo , String inchargeEmail){
+                                         String contactNo , String inchargeEmail, String inchargeName){
 
         registrationModel regModel = new registrationModel();
         regModel.setEmail(email);
@@ -255,6 +255,7 @@ public class RegistrationFragment extends Fragment {
         regModel.setInchargeNIC(inchargeNIC);
         regModel.setContactNo(contactNo);
         regModel.setInchargeEmail(inchargeEmail);
+        regModel.setInchargeFullName(inchargeName);
 
         db.collection("center").add(regModel).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
             @Override
