@@ -35,6 +35,7 @@ import com.skydoves.powerspinner.PowerSpinnerView;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Pattern;
+import com.mad.divamp.utils.SHA256;
 
 import es.dmoral.toasty.Toasty;
 
@@ -162,7 +163,7 @@ public class RegistrationFragment extends Fragment {
                 }
                 else {
                     insertVaccinationCenter(email.getText().toString(), centerName.getText().toString(),provice.getSelectedItem().toString(),
-                            district.getSelectedItem().toString(), password.getText().toString(), inchargeNIC.getText().toString(),
+                            district.getSelectedItem().toString(), SHA256.getHash(password.getText().toString()), inchargeNIC.getText().toString(),
                             contactNo.getText().toString(), inchargeEmail.getText().toString());
 
                 }
