@@ -54,6 +54,9 @@ public class RegistrationFragment extends Fragment {
                     ".{6,}" +                // at least 6 characters
                     "$");
 
+    private static final Pattern EMAILD_PATTERN =
+            Pattern.compile("[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+");
+
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -86,7 +89,7 @@ public class RegistrationFragment extends Fragment {
         inchargeEmail = binding.adminPage2InchargeEmail;
 
         stepsView
-                .setLabels(new String[] {"Center Details", "Incharge details", "Finish"})
+                .setLabels(new String[] {"Center Details", "In-Charge Details", "Finish"})
                 .setBarColorIndicator(getContext().getResources().getColor(R.color.inactive))
                 .setProgressColorIndicator(getContext().getResources().getColor(R.color.light_green))
                 .setLabelColorIndicator(getContext().getResources().getColor(R.color.inactive))
@@ -104,6 +107,9 @@ public class RegistrationFragment extends Fragment {
 
                   if(email.getText().toString().isEmpty()){
                       email.setError("Please enter your email !");
+                  }
+                  if(!EMAILD_PATTERN.matcher(email.getText().toString()).matches()){
+                      email.setError("Please enter valid email !");
                   }
                   if(centerName.getText().toString().isEmpty()){
                       centerName.setError("Please enter your vaccination center name");
@@ -140,20 +146,47 @@ public class RegistrationFragment extends Fragment {
             public void onClick(View v) {
 
                 if(inchargeNIC.getText().toString().isEmpty()){
-                    inchargeNIC.setError("Please enter your incharge NIC !");
+                    inchargeNIC.setError("Please enter your In-charge NIC !");
                 }
                 if(inchargeFullName.getText().toString().isEmpty()){
-                    inchargeFullName.setError("Please enter your incharge's name");
+                    inchargeFullName.setError("Please enter your In-charge's name");
                 }
                 if(contactNo.getText().toString().isEmpty()){
                     contactNo.setError("Please enter your contact number");
                 }
                 if(inchargeEmail.getText().toString().isEmpty()){
-                    inchargeEmail.setError("Please enter your incharge's email");
+                    inchargeEmail.setError("Please enter your In-charge's email");
+                }
+                if(!EMAILD_PATTERN.matcher(inchargeEmail.getText().toString()).matches()){
+                    inchargeEmail.setError("Please enter valid email");
                 }
                 else {
-                    goToThirdPage();
+                    insertVaccinationCenter(email.getText().toString(), centerName.getText().toString(),provice.getSelectedItem().toString(),
+                            district.getSelectedItem().toString(), password.getText().toString(), inchargeNIC.getText().toString(),
+                            contactNo.getText().toString(), inchargeEmail.getText().toString());
+
                 }
+
+            }
+        });
+
+        next3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                email.setText("");
+                centerName.setText("");
+                provice.setSelected(false);
+                district.setSelected(false);
+                password.setText("");
+                repassword.setText("");
+                inchargeNIC.setText("");
+                inchargeFullName.setText("");
+                contactNo.setText("");
+                inchargeEmail.setText("");
+
+                goToFirstPage();
+
 
             }
         });
@@ -198,6 +231,10 @@ public class RegistrationFragment extends Fragment {
 
         thirdPageVisible();
     }
+    private void goToFirstPage(){
+
+        firstPageVisible();
+    }
 
     @Override
     public void onDestroyView() {
@@ -222,6 +259,7 @@ public class RegistrationFragment extends Fragment {
             @Override
             public void onSuccess(DocumentReference documentReference) {
 
+                goToThirdPage();
                 Toasty.success(getActivity(), "Vaccination center registration successful", Toast.LENGTH_LONG, true).show();
 
             }
