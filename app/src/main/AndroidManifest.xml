@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -23,15 +24,7 @@
             android:exported="false" />
         <activity
             android:name=".citizen.userManagement.LoginActivity"
-            android:exported="true">
-
-
-        </activity>
-        <activity
-            android:name=".location.logIn.LogIn1Activity"
-            android:exported="true" >
-
-        </activity>
+            android:exported="true"/>
         <activity
             android:name=".citizen.CitizenMainActivity"
             android:exported="true"
@@ -58,7 +51,9 @@
         <activity
             android:name=".admin.AdminLoginActivity"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
+
+        </activity>
         <activity
             android:name=".SplashScreenActivity"
             android:exported="true" />
