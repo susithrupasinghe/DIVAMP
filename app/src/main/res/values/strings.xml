@@ -80,8 +80,8 @@
 
     //Citizen portal - Status
 
-    <string name="citizen_status_mark_infected">Mark as Infected</string>
-    <string name="citizen_status_mark_healthy">Mark as Healthy</string>
+    <string name="citizen_status_mark_infected">Mark Status</string>
+    <string name="citizen_status_mark_healthy">Mark Status</string>
     <string name="citizen_status_marked_date">marked Date :</string>
     <string name="citizen_status_marked_time">marked Time :</string>
 

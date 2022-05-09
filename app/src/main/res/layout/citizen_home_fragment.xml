@@ -16,57 +16,132 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/citizen"
             android:layout_width="match_parent"
-            android:layout_height="307dp"
-            android:layout_gravity="center">
+            android:layout_height="match_parent"
+            android:visibility="visible">
 
             <LinearLayout
-                android:layout_width="343dp"
-                android:layout_height="275dp"
+                android:id="@+id/citizentopCard3"
+                android:layout_width="344dp"
+                android:layout_height="190dp"
                 android:background="@drawable/cardview_background"
                 android:orientation="vertical"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.492"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" >
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.086">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/citizensecondRow3"
                     android:layout_width="match_parent"
-                    android:layout_height="98dp">
+                    android:layout_height="67dp"
+                    android:layout_marginTop="20dp">
 
-                    >
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/citizen_profile_image"
+                        android:layout_width="114dp"
+                        android:layout_height="66dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:src="@tools:sample/avatars" />
 
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="229dp"
+                        android:layout_height="61dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/citizen_profile_image"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/citizen_user_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="34dp"
+                                android:gravity="center|left"
+                                android:text="TextView"
+                                android:textColor="#000000"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                tools:text="Susith Rupasinghe" />
+
+                            <TextView
+                                android:id="@+id/citizen_user_nic"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="200013400692"
+                                android:textColor="#020202"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/citizenthirdrow3"
+                    android:layout_width="match_parent"
+                    android:layout_height="111dp">
+
+                    <TextView
+                        android:id="@+id/citizen_user_age"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center|left"
+                        android:text="Age :  None"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.195"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/citizen_last_vaccinated_date_inf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:gravity="center|left"
+                        android:text="Last Vaccinated Date : None"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/citizen_user_age"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/citizen_user_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="64dp"
+                        android:gravity="center|left"
+                        android:text="Current Status : None"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/citizen_last_vaccinated_date_inf"
+                        app:layout_constraintTop_toTopOf="parent" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
+
             </LinearLayout>
-        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/textView20"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="History"
-                    android:textColor="#581013"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/citizen_vaccine_recycler"
-                    android:layout_width="382dp"
-                    android:layout_height="392dp"
-                    android:layout_gravity="center" />
-            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/citizen_vaccine_list_recycler_view"
+                android:layout_width="408dp"
+                android:layout_height="386dp"
+                android:layout_marginTop="32dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/citizentopCard3"
+                app:layout_constraintVertical_bias="0.0" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
