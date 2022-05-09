@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.anton46.stepsview.StepsView;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.CollectionReference;
@@ -24,9 +25,9 @@ import es.dmoral.toasty.Toasty;
 
 public class Registration2Activity extends AppCompatActivity {
 
-    String NIC,fullName,contactNo,email,image;
+    String NIC,fullName,contactNo,email,image,status;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
-
+    private StepsView stepsView;
     Spinner categoryId;
     EditText emailEtd,location_name,NICEtd,fullNameEtd,contactNoEtd,Address_1,Address_2,password;
     Button btnFinish;
@@ -35,20 +36,27 @@ public class Registration2Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         getSupportActionBar().hide();
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.location_activity_registration2);
 
+        setContentView(R.layout.location_activity_registration2);
+        stepsView = findViewById(R.id.stepsViewLocation2);
         location_name = findViewById(R.id.location_name);
         categoryId = findViewById(R.id.category);
         Address_1 = findViewById(R.id.Address_1);
         Address_2 = findViewById(R.id.Address_2);
         password = findViewById(R.id.password);
-
         NICEtd = (EditText)findViewById(R.id.NIC);
         fullNameEtd = (EditText)findViewById(R.id.fullName);
         contactNoEtd = (EditText)findViewById(R.id.contactNumber);
         emailEtd = (EditText)findViewById(R.id.RegEmail);
-
         btnFinish = (Button) findViewById(R.id.finish_btn);
+
+        stepsView
+                .setLabels(new String[] {"Location Details", "Contact Details", "Finish"})
+                .setBarColorIndicator(stepsView.getContext().getResources().getColor(R.color.inactive))
+                .setProgressColorIndicator(stepsView.getContext().getResources().getColor(R.color.light_green))
+                .setLabelColorIndicator(stepsView.getContext().getResources().getColor(R.color.inactive))
+                .setCompletedPosition(1)
+                .drawView();
 
         Intent intent = getIntent();
 //        String email = intent.getStringExtra("email");
@@ -65,6 +73,8 @@ public class Registration2Activity extends AppCompatActivity {
                 fullName = fullNameEtd.getText().toString();
                 contactNo = contactNoEtd.getText().toString();
                 email = emailEtd.getText().toString();
+                image = toString();
+                status = toString();
 
                 String Expn =
                         "^(([\\w-]+\\.)+[\\w-]+|([a-zA-Z]{1}|[\\w-]{2,}))@"
@@ -89,17 +99,17 @@ public class Registration2Activity extends AppCompatActivity {
                     contactNoEtd.setError("Please enter contact number");
                 } else {
                     // calling method to add data to Firebase Firestore.
-                    addData(Location_name,category,Address_1,Address_2,NIC, fullName, contactNo,password,email,image);
+                    addData(Location_name,category,Address_1,Address_2,NIC, fullName, contactNo,password,email,image,status);
                 }
             }
         });
     }
 
-    private void addData(String Location_name,String category, String Address_1, String Address_2, String NIC, String fullName, String contactNo, String password,String email,String image){
+    private void addData(String Location_name,String category, String Address_1, String Address_2, String NIC, String fullName, String contactNo, String password,String email,String image,String status){
 
         CollectionReference dbLocation = db.collection("location");
 
-        location location = new location(Location_name,category,Address_1,Address_2,NIC, fullName, contactNo,password,email,image);
+        location location = new location(Location_name,category,Address_1,Address_2,NIC, fullName, contactNo,password,email,image,status);
 
         dbLocation.add(location).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
             @Override

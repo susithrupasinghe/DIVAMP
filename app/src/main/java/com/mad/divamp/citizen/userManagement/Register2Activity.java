@@ -24,6 +24,8 @@ import com.mad.divamp.citizen.models.Citizen;
 import com.mad.divamp.location.registration.Registration2Activity;
 import com.mad.divamp.location.registration.Registration3Activity;
 
+import java.util.Arrays;
+
 import es.dmoral.toasty.Toasty;
 
 public class Register2Activity extends AppCompatActivity {
@@ -70,17 +72,72 @@ public class Register2Activity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 String selected = adapterView.getItemAtPosition(i).toString();
 
-//                switch (selected){
-//                    case "Western Province":{}
-//                    case "Eastern Province":{}
-//                    case "Southern Province":{}
-//                    case "Northern Province":{}
-//                    case "North Central Province":{}
-//                    case "North Western Province":{}
-//                    case "Uva Province":{}
-//                    case "Sabaragamuwa Province":{}
-//                    case "Central Province":{}
-//                }
+                switch (selected){
+                    case "Western Province":{
+                        String[] districtArray = getResources().getStringArray(R.array.western);
+                        ArrayAdapter adapter = new ArrayAdapter(getApplicationContext(), android.R.layout.simple_spinner_dropdown_item,districtArray);
+                        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                        districtSp.setAdapter(adapter);
+                        break;
+                    }
+                    case "Eastern Province":{
+                        String[] districtArray = getResources().getStringArray(R.array.eastern);
+                        ArrayAdapter adapter = new ArrayAdapter(getApplicationContext(), android.R.layout.simple_spinner_dropdown_item,districtArray);
+                        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                        districtSp.setAdapter(adapter);
+                        break;
+                    }
+                    case "Southern Province":{
+                        String[] districtArray = getResources().getStringArray(R.array.southern);
+                        ArrayAdapter adapter = new ArrayAdapter(getApplicationContext(), android.R.layout.simple_spinner_dropdown_item,districtArray);
+                        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                        districtSp.setAdapter(adapter);
+                        break;
+                    }
+                    case "Northern Province":{
+                        String[] districtArray = getResources().getStringArray(R.array.northern);
+                        ArrayAdapter adapter = new ArrayAdapter(getApplicationContext(), android.R.layout.simple_spinner_dropdown_item,districtArray);
+                        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                        districtSp.setAdapter(adapter);
+                        break;
+                    }
+                    case "North Central Province":{
+                        String[] districtArray = getResources().getStringArray(R.array.northCentral);
+                        ArrayAdapter adapter = new ArrayAdapter(getApplicationContext(), android.R.layout.simple_spinner_dropdown_item,districtArray);
+                        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                        districtSp.setAdapter(adapter);
+                        break;
+                    }
+                    case "North Western Province":{
+                        String[] districtArray = getResources().getStringArray(R.array.northWestern);
+                        ArrayAdapter adapter = new ArrayAdapter(getApplicationContext(), android.R.layout.simple_spinner_dropdown_item,districtArray);
+                        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                        districtSp.setAdapter(adapter);
+                        break;
+                    }
+                    case "Uva Province":{
+                        String[]  districtArray = getResources().getStringArray(R.array.uva);
+                        ArrayAdapter adapter = new ArrayAdapter(getApplicationContext(), android.R.layout.simple_spinner_dropdown_item,districtArray);
+                        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                        districtSp.setAdapter(adapter);
+                        break;
+                    }
+                    case "Sabaragamuwa Province":{
+                        String[]  districtArray = getResources().getStringArray(R.array.sabaragamuwa);
+                        ArrayAdapter adapter = new ArrayAdapter(getApplicationContext(), android.R.layout.simple_spinner_dropdown_item,districtArray);
+                        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                        districtSp.setAdapter(adapter);
+                        break;
+                    }
+                    case "Central Province":{
+                        String[] districtArray = getResources().getStringArray(R.array.central);
+                        ArrayAdapter adapter = new ArrayAdapter(getApplicationContext(), android.R.layout.simple_spinner_dropdown_item,districtArray);
+                        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                        districtSp.setAdapter(adapter);
+                        break;
+                    }
+                }
+
             }
 
             @Override
@@ -97,8 +154,7 @@ public class Register2Activity extends AppCompatActivity {
                 address1 = address1Et.getText().toString();
                 address2 = address2Et.getText().toString();
                 province = provinceSp.getSelectedItem().toString();
-                district = "Colombo";//districtSp.getSelectedItem().toString()//
-
+                district = districtSp.getSelectedItem().toString();
                 String Expn =
                         "^(([\\w-]+\\.)+[\\w-]+|([a-zA-Z]{1}|[\\w-]{2,}))@"
                                 +"((([0-1]?[0-9]{1,2}|25[0-5]|2[0-4][0-9])\\.([0-1]?"
@@ -139,8 +195,22 @@ public class Register2Activity extends AppCompatActivity {
                          ){
         CollectionReference dbCitizen = db.collection("citizen");
         //create a citizen object
-        Citizen citizen = new Citizen(email,contactNo,province,district,address1,address2,firstName,lastName,nic,birthday,
-                                        gender,hashPassword);
+        Citizen citizen = new Citizen();
+        citizen.setEmail(email);
+        citizen.setContactNo(contactNo);
+        citizen.setProvince(province);
+        citizen.setDistrict(district);
+        citizen.setAddress1(address1);
+        citizen.setAddress2(address2);
+        citizen.setFirstName(firstName);
+        citizen.setLastName(lastName);
+        citizen.setNic(nic);
+        citizen.setBirthday(birthday);
+        citizen.setGender(gender);
+        citizen.setHashPassword(hashPassword);
+        citizen.setImgurl("https://i.pravatar.cc/150?u=a042581f4e29026704d");
+        citizen.setStatus("Healthy");
+
 
         dbCitizen.add(citizen).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
             @Override

@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="vaccines">
+        <item>Phyzer</item>
+        <item>Moderna</item>
+        <item>Astrazeneca</item>
+    </string-array>
+
     <string-array name="category">
+        <item>Category</item>
         <item>Super Market</item>
         <item>Book Shop</item>
         <item>Hotel And Restaurant</item>
+        <item>Pharmacy</item>
+        <item>Channel Center</item>
+        <item>Other</item>
     </string-array>
+
     <string-array name="gender">
         <item>Gender</item>
         <item>male</item>
@@ -23,10 +34,52 @@
         <item>Sabaragamuwa Province</item>
         <item>North Western Province</item>
     </string-array>
+    <string-array name="district">
+        <item>kkk</item>
+    </string-array>
+
 
     <string-array name="western">
         <item>Colombo</item>
         <item>Gampaha</item>
         <item>Kalutara</item>
+    </string-array>
+    <string-array name="central">
+        <item>Matale</item>
+        <item>Kandy</item>
+        <item>Nuwara Eliya</item>
+    </string-array>
+    <string-array name="northern">
+        <item>Jaffna</item>
+        <item>Kilinochchi</item>
+        <item>Mannar</item>
+        <item>Mullaitivu</item>
+        <item>Vavuniya</item>
+    </string-array>
+    <string-array name="eastern">
+        <item>Trincomalee</item>
+        <item>Batticaloa</item>
+        <item>Ampara</item>
+    </string-array>
+    <string-array name="southern">
+        <item>Hambantota</item>
+        <item>Matara</item>
+        <item>Galle</item>
+    </string-array>
+    <string-array name="northCentral">
+        <item>Anuradhapura</item>
+        <item>Polonnaruwa</item>
+    </string-array>
+    <string-array name="northWestern">
+        <item>Puttalam</item>
+        <item>Kurunegala</item>
+    </string-array>
+    <string-array name="uva">
+        <item>Badulla</item>
+        <item>Monaragala</item>
+    </string-array>
+    <string-array name="sabaragamuwa">
+        <item>Kegalle</item>
+        <item>Rathnapura</item>
     </string-array>
 </resources>

@@ -128,10 +128,7 @@ public class ManageVaccinesFragment extends Fragment {
         db.collection("vaccines").add(mymodel).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
             @Override
             public void onSuccess(DocumentReference documentReference) {
-
-
                 Toasty.error(getActivity(), "Vaccine insertion successful", Toast.LENGTH_SHORT, true).show();
-
             }
         })
                 .addOnFailureListener(new OnFailureListener() {

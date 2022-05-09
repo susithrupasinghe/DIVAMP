@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -34,7 +35,7 @@ public class centerListRecyclerViewAdapter extends RecyclerView.Adapter<centerLi
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
-        View listItem= layoutInflater.inflate(R.layout.admin_recycler_view_item, parent, false);
+        View listItem= layoutInflater.inflate(R.layout.admin_center_list_recycler_item, parent, false);
         ViewHolder viewHolder = new ViewHolder(listItem);
         return viewHolder;
     }
@@ -45,10 +46,10 @@ public class centerListRecyclerViewAdapter extends RecyclerView.Adapter<centerLi
         holder.inchargeName.setText(listdata[position].getInchargeFullName());
         holder.inchargeEmail.setText(listdata[position].getInchargeEmail());
         holder.contact.setText(listdata[position].getContact());
+        holder.delete.bringToFront();
         holder.delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
 
                 AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(view.getContext());
                 alertDialogBuilder.setTitle("Confirm your delete request !");
@@ -64,13 +65,13 @@ public class centerListRecyclerViewAdapter extends RecyclerView.Adapter<centerLi
                             @Override
                             public void onSuccess(Void aVoid) {
 
-                                Toasty.success(view.getContext(), "Vaccine delete successful", Toast.LENGTH_SHORT, true).show();
+                                Toasty.success(view.getContext(), "Vaccine center delete process successful", Toast.LENGTH_SHORT, true).show();
 
                             }
                         }).addOnFailureListener(new OnFailureListener() {
                             @Override
                             public void onFailure(@NonNull Exception e) {
-                                Toasty.error(view.getContext(), "Vaccine delete failed", Toast.LENGTH_SHORT, true).show();
+                                Toasty.error(view.getContext(), "Vaccine center delete process failed", Toast.LENGTH_SHORT, true).show();
                             }
                         });
 
@@ -84,6 +85,8 @@ public class centerListRecyclerViewAdapter extends RecyclerView.Adapter<centerLi
                         Toasty.info(view.getContext(), "Delete process Cancelled !", Toast.LENGTH_SHORT, true).show();
                     }
                 });
+
+                alertDialogBuilder.show();
 
             }
         });
@@ -100,15 +103,17 @@ public class centerListRecyclerViewAdapter extends RecyclerView.Adapter<centerLi
         public TextView inchargeName;
         public  TextView inchargeEmail;
         public  TextView contact;
-        public Button delete;
+        public ImageView delete;
 
         public ViewHolder(View itemView) {
             super(itemView);
 
-//            this.title = (TextView) itemView.findViewById(R.id.card_item_name);
-//            this.row1 = (TextView) itemView.findViewById(R.id.card_item_row1);
-//            this.row2 = (TextView) itemView.findViewById(R.id.card_item_row2);
-//            relativeLayout = (RelativeLayout)itemView.findViewById(R.id.cardRelativeLayout);
+            this.centerName = (TextView) itemView.findViewById(R.id.card_item_name);
+            this.inchargeName = (TextView) itemView.findViewById(R.id.card_item_row1_center);
+            this.inchargeEmail = (TextView) itemView.findViewById(R.id.card_item_row2_center);
+            this.contact = (TextView) itemView.findViewById(R.id.card_item_row3_center);
+            this.delete = (ImageView) itemView.findViewById(R.id.admin_center_deleteBin);
+
         }
     }
 }

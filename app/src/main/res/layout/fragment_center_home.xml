@@ -4,49 +4,422 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ic_detected_patient"
     tools:context=".admin.ui.home.HomeFragment">
 
-    <EditText
-        android:id="@+id/editTextTextPersonName4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="444dp"
-        android:background="@drawable/ic_input"
-        android:ems="10"
-        android:fontFamily="@font/abhaya_libre_extrabold"
-        android:hint="NIC"
-        android:inputType="textPersonName"
-        android:paddingLeft="30dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="184dp"
-        android:layout_marginTop="492dp"
-        android:background="@drawable/ic_next_btn"
-        android:fontFamily="@font/yantramanav_bold"
-        android:foreground="@drawable/ic_next_btn"
-        android:text="Button"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/page_stepper_center"
+            android:layout_width="match_parent"
+            android:layout_height="119dp"
+            tools:visibility="gone">
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="174dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="4dp"
-        android:fontFamily="@font/yantramanav_bold"
-        android:text="Vaccination"
-        android:textColor="#FFFFFF"
-        android:textSize="28sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+            <com.anton46.stepsview.StepsView
+                android:id="@+id/stepsViewCenter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </com.anton46.stepsview.StepsView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/page_1_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            tools:visibility="gone">
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="347dp"
+                android:layout_height="319dp"
+                android:src="@drawable/ic_qr_code_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.088" />
+
+            <EditText
+                android:id="@+id/center_page_1_nic"
+                android:layout_width="297dp"
+                android:layout_height="41dp"
+                android:background="@drawable/ic_input"
+                android:ems="10"
+                android:hint="NIC"
+                android:inputType="textPersonName"
+                android:paddingLeft="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.496"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView7"
+                app:layout_constraintVertical_bias="0.295" />
+
+            <Button
+                android:id="@+id/center_page_1_next"
+                android:layout_width="129dp"
+                android:layout_height="42dp"
+                android:background="@drawable/btn_primary"
+                android:text="Next"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/center_page_1_nic"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/center_page_1_nic"
+                app:layout_constraintVertical_bias="0.169" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/page_2_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="612dp"
+            android:layout_gravity="center"
+            tools:visibility="gone">
+
+            <TextView
+                android:id="@+id/textView27"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Detected patient"
+                android:textColor="#000000"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/topCard"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.11" />
+
+            <LinearLayout
+                android:id="@+id/topCard"
+                android:layout_width="344dp"
+                android:layout_height="190dp"
+                android:background="@drawable/cardview_background"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.492"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.158">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/secondRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="67dp"
+                    android:layout_marginTop="20dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/center_profile_image"
+                        android:layout_width="114dp"
+                        android:layout_height="66dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:src="@tools:sample/avatars" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="229dp"
+                        android:layout_height="61dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/center_profile_image"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/center_user_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="34dp"
+                                android:gravity="center|left"
+                                android:text="TextView"
+                                android:textColor="#000000"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                tools:text="Susith Rupasinghe" />
+
+                            <TextView
+                                android:id="@+id/center_user_nic"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="200013400692"
+                                android:textColor="#020202"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/thirdrow"
+                    android:layout_width="match_parent"
+                    android:layout_height="111dp">
+
+                    <TextView
+                        android:id="@+id/center_user_age"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center|left"
+                        android:text="Age :  None"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.195"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/center_last_vaccinated_date_inf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:gravity="center|left"
+                        android:text="Last Vaccinated Date : None"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/center_user_age"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/center_user_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="64dp"
+                        android:gravity="center|left"
+                        android:text="Current Status : None"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/center_last_vaccinated_date_inf"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/center_btn_finish"
+                android:layout_width="136dp"
+                android:layout_height="40dp"
+                android:background="@drawable/btn_primary"
+                android:text="Add"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/center_vaccine_name"
+                app:layout_constraintStart_toStartOf="@+id/center_vaccine_name"
+                app:layout_constraintTop_toBottomOf="@+id/center_vaccine_name"
+                app:layout_constraintVertical_bias="0.256" />
+
+            <Spinner
+                android:id="@+id/center_vaccine_name"
+                android:layout_width="290dp"
+                android:layout_height="41dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/ic_input"
+                android:entries="@array/vaccines"
+                app:layout_constraintEnd_toEndOf="@+id/center_batch_id"
+                app:layout_constraintStart_toStartOf="@+id/center_batch_id"
+                app:layout_constraintTop_toBottomOf="@+id/center_batch_id" />
+
+            <EditText
+                android:id="@+id/center_batch_id"
+                android:layout_width="290dp"
+                android:layout_height="41dp"
+                android:layout_marginTop="96dp"
+                android:background="@drawable/ic_input"
+                android:ems="10"
+                android:hint="Batch ID"
+                android:inputType="textPersonName"
+                android:paddingLeft="20dp"
+                android:text=""
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.495"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/topCard" />
+
+            <Button
+                android:id="@+id/center_show_all"
+                android:layout_width="136dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="28dp"
+                android:background="@drawable/btn_secondary"
+                android:text="Show ALl"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.752"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/topCard" />
+
+            <Button
+                android:id="@+id/center_back_btt_page_2"
+                android:layout_width="136dp"
+                android:layout_height="39dp"
+                android:layout_marginTop="28dp"
+                android:background="@drawable/btn_secondary"
+                android:backgroundTint="@color/white"
+                android:text="Back"
+                app:layout_constraintEnd_toStartOf="@+id/center_show_all"
+                app:layout_constraintHorizontal_bias="0.689"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/topCard" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/page3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:id="@+id/topCard3"
+                android:layout_width="344dp"
+                android:layout_height="190dp"
+                android:background="@drawable/cardview_background"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.492"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.086">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/secondRow3"
+                    android:layout_width="match_parent"
+                    android:layout_height="67dp"
+                    android:layout_marginTop="20dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/center_profile_image_page_3"
+                        android:layout_width="114dp"
+                        android:layout_height="66dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:src="@tools:sample/avatars" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="229dp"
+                        android:layout_height="61dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/center_profile_image_page_3"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/center_user_name_page_3"
+                                android:layout_width="match_parent"
+                                android:layout_height="34dp"
+                                android:gravity="center|left"
+                                android:text="TextView"
+                                android:textColor="#000000"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                tools:text="Susith Rupasinghe" />
+
+                            <TextView
+                                android:id="@+id/center_user_nic_page_3"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="200013400692"
+                                android:textColor="#020202"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/thirdrow3"
+                    android:layout_width="match_parent"
+                    android:layout_height="111dp">
+
+                    <TextView
+                        android:id="@+id/center_user_age_page_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center|left"
+                        android:text="Age :  None"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.195"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/center_last_vaccinated_date_inf_page_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:gravity="center|left"
+                        android:text="Last Vaccinated Date : None"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/center_user_age_page_3"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/center_user_status_page_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="64dp"
+                        android:gravity="center|left"
+                        android:text="Current Status : None"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/center_last_vaccinated_date_inf_page_3"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/center_vaccine_list_recycler_view"
+                android:layout_width="408dp"
+                android:layout_height="386dp"
+                android:layout_marginTop="32dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/topCard3"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <Button
+                android:id="@+id/center_page_3_back"
+                android:layout_width="126dp"
+                android:layout_height="47dp"
+                android:background="@drawable/btn_secondary"
+                android:text="Back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.104"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/center_vaccine_list_recycler_view"
+                app:layout_constraintVertical_bias="0.428" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

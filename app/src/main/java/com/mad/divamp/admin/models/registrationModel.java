@@ -2,6 +2,23 @@ package com.mad.divamp.admin.models;
 
 public class registrationModel {
 
+    private String email;
+    private String CenterName;
+    private String province;
+    private String district;
+    private String password;
+    private String inchargeNIC;
+    private  String contactNo;
+    private  String inchargeFullName;
+    private  String inchargeEmail;
+
+    public String getInchargeFullName() {
+        return inchargeFullName;
+    }
+
+    public void setInchargeFullName(String inchargeFullName) {
+        this.inchargeFullName = inchargeFullName;
+    }
     public String getEmail() {
         return email;
     }
@@ -66,13 +83,5 @@ public class registrationModel {
         this.inchargeEmail = inchargeEmail;
     }
 
-    private String email;
-    private String CenterName;
-    private String province;
-    private String district;
-    private String password;
-    private String inchargeNIC;
-    private  String contactNo;
-    private  String inchargeEmail;
 
 }
