@@ -97,6 +97,9 @@
     <string name="citizen_qr_code_title">QR Code</string>
     <string name="citizen_qr_code_instructions">Show the QR code to the Vaccination Center</string>
 
+    //Citizen portal- Settings
+    <string name="citizen_settings_delete">Delete Account</string>
+
 
     /////////////////////////////////////// Vaccination Center
     ////////////////////////////////////////
@@ -331,6 +334,7 @@
     <string name="AlertNotification">Alert Notification</string>
     <string name="QRCode">QR Code</string>
     <string name="Settings">Settings</string>
+    <string name="citizen_settings_logout">Log Out</string>
 
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////////////

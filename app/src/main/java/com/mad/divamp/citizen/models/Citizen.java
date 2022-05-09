@@ -97,7 +97,15 @@ public class Citizen {
         this.hashPassword = hashPassword;
     }
 
-    private String email,contactNo,province,district,address1,address2,firstName,lastName,nic,birthday,gender,hashPassword;
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    private String email,contactNo,province,district,address1,address2,firstName,lastName,nic,birthday,gender,hashPassword,status;
 
 
 }
