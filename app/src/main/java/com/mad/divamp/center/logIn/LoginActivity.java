@@ -63,7 +63,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
         db.collection("center")
-                .whereEqualTo("centerId", centerid)
+                .whereEqualTo("email", centerid)
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
@@ -82,7 +82,7 @@ public class LoginActivity extends AppCompatActivity {
                                     Toasty.success(getApplicationContext(), "Success!", Toast.LENGTH_SHORT, true).show();
                                     SharedPreferences.Editor editor = sharedpreferences.edit();
 
-                                    editor.putString("centerid", centerid);
+                                    editor.putString("email", centerid);
                                     editor.putBoolean("loggedin", true);
                                     editor.commit();
                                     editor.apply();

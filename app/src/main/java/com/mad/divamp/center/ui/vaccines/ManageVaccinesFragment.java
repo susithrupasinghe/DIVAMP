@@ -189,7 +189,7 @@ public class ManageVaccinesFragment extends Fragment {
 
                         } else {
 
-                            Toasty.error(getActivity(), " Data retrieval faild", Toast.LENGTH_SHORT, true).show();
+                            Toasty.error(getActivity(), " Data retrieval failed", Toast.LENGTH_SHORT, true).show();
                         }
                     }
                 });
