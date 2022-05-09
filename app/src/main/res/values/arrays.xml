@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="category">
+        <item>Category</item>
         <item>Super Market</item>
         <item>Book Shop</item>
         <item>Hotel And Restaurant</item>
+        <item>Pharmacy</item>
+        <item>Channel Center</item>
+        <item>Other</item>
     </string-array>
 
     <string-array name="gender">

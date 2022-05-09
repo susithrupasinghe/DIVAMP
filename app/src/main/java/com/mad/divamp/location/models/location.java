@@ -2,9 +2,9 @@ package com.mad.divamp.location.models;
 
 public class location {
 
-    private String email,Location_name,NIC,fullName,contactNo,category,Address_1,Address_2,password,image;
+    private String email,Location_name,NIC,fullName,contactNo,category,Address_1,Address_2,password,image,status;
 
-    public location(String Location_name, String category, String Address_1, String Address_2, String NIC, String fullName, String contactNo, String password, String email, String image){
+    public location(String Location_name, String category, String Address_1, String Address_2, String NIC, String fullName, String contactNo, String password, String email, String image,String status){
         this.email=email;
         this.Location_name = Location_name;
         this.category = category;
@@ -15,6 +15,15 @@ public class location {
         this.contactNo = contactNo;
         this.password = password;
         this.image=image;
+        this.status = status;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 
     public location() {
