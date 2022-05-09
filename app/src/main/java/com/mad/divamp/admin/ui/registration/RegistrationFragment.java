@@ -13,6 +13,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
@@ -97,7 +99,7 @@ public class RegistrationFragment extends Fragment {
                 .setCompletedPosition(0)
                 .drawView();
 
-
+        provincevalidator();
         firstPageVisible();
         next1 = binding.adminRegNextBtn1;
         next2 = binding.adminRegNextBtn2;
@@ -241,6 +243,93 @@ public class RegistrationFragment extends Fragment {
     public void onDestroyView() {
         super.onDestroyView();
         binding = null;
+    }
+
+    private void provincevalidator(){
+
+        String[] provinceArray = getResources().getStringArray(R.array.province);
+        ArrayAdapter adapter = new ArrayAdapter(getActivity(), android.R.layout.simple_spinner_dropdown_item,provinceArray);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        binding.adminPage1SpinnerProvince.setAdapter(adapter);
+
+        binding.adminPage1SpinnerProvince.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                String selected = adapterView.getItemAtPosition(i).toString();
+
+                switch (selected){
+                    case "Western Province":{
+                        String[] districtArray = getResources().getStringArray(R.array.western);
+                        ArrayAdapter adapter = new ArrayAdapter(getActivity(), android.R.layout.simple_spinner_dropdown_item,districtArray);
+                        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                        binding.adminPage1SpinnerDistrict.setAdapter(adapter);
+                        break;
+                    }
+                    case "Eastern Province":{
+                        String[] districtArray = getResources().getStringArray(R.array.eastern);
+                        ArrayAdapter adapter = new ArrayAdapter(getActivity(), android.R.layout.simple_spinner_dropdown_item,districtArray);
+                        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                        binding.adminPage1SpinnerDistrict.setAdapter(adapter);
+                        break;
+                    }
+                    case "Southern Province":{
+                        String[] districtArray = getResources().getStringArray(R.array.southern);
+                        ArrayAdapter adapter = new ArrayAdapter(getActivity(), android.R.layout.simple_spinner_dropdown_item,districtArray);
+                        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                        binding.adminPage1SpinnerDistrict.setAdapter(adapter);
+                        break;
+                    }
+                    case "Northern Province":{
+                        String[] districtArray = getResources().getStringArray(R.array.northern);
+                        ArrayAdapter adapter = new ArrayAdapter(getActivity(), android.R.layout.simple_spinner_dropdown_item,districtArray);
+                        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                        binding.adminPage1SpinnerDistrict.setAdapter(adapter);
+                        break;
+                    }
+                    case "North Central Province":{
+                        String[] districtArray = getResources().getStringArray(R.array.northCentral);
+                        ArrayAdapter adapter = new ArrayAdapter(getActivity(), android.R.layout.simple_spinner_dropdown_item,districtArray);
+                        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                        binding.adminPage1SpinnerDistrict.setAdapter(adapter);
+                        break;
+                    }
+                    case "North Western Province":{
+                        String[] districtArray = getResources().getStringArray(R.array.northWestern);
+                        ArrayAdapter adapter = new ArrayAdapter(getActivity(), android.R.layout.simple_spinner_dropdown_item,districtArray);
+                        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                        binding.adminPage1SpinnerDistrict.setAdapter(adapter);
+                        break;
+                    }
+                    case "Uva Province":{
+                        String[]  districtArray = getResources().getStringArray(R.array.uva);
+                        ArrayAdapter adapter = new ArrayAdapter(getActivity(), android.R.layout.simple_spinner_dropdown_item,districtArray);
+                        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                        binding.adminPage1SpinnerDistrict.setAdapter(adapter);
+                        break;
+                    }
+                    case "Sabaragamuwa Province":{
+                        String[]  districtArray = getResources().getStringArray(R.array.sabaragamuwa);
+                        ArrayAdapter adapter = new ArrayAdapter(getActivity(), android.R.layout.simple_spinner_dropdown_item,districtArray);
+                        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                        binding.adminPage1SpinnerDistrict.setAdapter(adapter);
+                        break;
+                    }
+                    case "Central Province":{
+                        String[] districtArray = getResources().getStringArray(R.array.central);
+                        ArrayAdapter adapter = new ArrayAdapter(getActivity(), android.R.layout.simple_spinner_dropdown_item,districtArray);
+                        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                        binding.adminPage1SpinnerDistrict.setAdapter(adapter);
+                        break;
+                    }
+                }
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
     }
 
     private void insertVaccinationCenter(String email, String CenterName, String province, String district, String password, String inchargeNIC,

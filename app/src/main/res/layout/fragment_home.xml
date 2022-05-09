@@ -97,7 +97,7 @@
                         </LinearLayout>
 
                         <TextView
-                            android:id="@+id/textView21"
+                            android:id="@+id/totalVaccinatedCount"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -113,7 +113,7 @@
                             app:layout_constraintVertical_bias="0.512" />
 
                         <TextView
-                            android:id="@+id/textView23"
+                            android:id="@+id/dose_1_only"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -129,7 +129,7 @@
                             app:layout_constraintVertical_bias="0.512" />
 
                         <TextView
-                            android:id="@+id/textView24"
+                            android:id="@+id/dose_2_only"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -145,7 +145,7 @@
                             app:layout_constraintVertical_bias="0.512" />
 
                         <TextView
-                            android:id="@+id/textView25"
+                            android:id="@+id/dose_3_only"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
@@ -247,12 +247,12 @@
                         </LinearLayout>
 
                         <TextView
-                            android:id="@+id/textView29"
+                            android:id="@+id/total_infected_count"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:text="Total Infected Count : Loading"
+                            android:text="Total Infected Count : 0"
                             android:textColor="#000000"
                             android:textStyle="bold"
                             app:layout_constraintBottom_toBottomOf="parent"
@@ -386,7 +386,7 @@
                             android:orientation="horizontal">
 
                             <TextView
-                                android:id="@+id/textView32"
+                                android:id="@+id/centerCount"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
