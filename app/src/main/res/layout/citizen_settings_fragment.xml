@@ -24,11 +24,10 @@
             android:id="@+id/citizenDeleteBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="55dp"
-            android:layout_marginTop="416dp"
-            android:background="@drawable/ic_location_delete"
-            android:foreground="@drawable/ic_location_delete"
-            android:text="Button"
+            android:layout_marginTop="428dp"
+            android:background="@drawable/ic_citizen_button_brown"
+            android:text="@string/citizen_settings_delete"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -36,11 +35,10 @@
             android:id="@+id/citizenLogOut"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="55dp"
             android:layout_marginTop="40dp"
-            android:background="@drawable/ic_locatio_logout"
-            android:foreground="@drawable/ic_locatio_logout"
-            android:text="Button"
+            android:background="@drawable/ic_citizen_button_brown"
+            android:text="@string/citizen_settings_logout"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/citizenDeleteBtn" />
 

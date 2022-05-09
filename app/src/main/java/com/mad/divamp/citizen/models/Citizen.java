@@ -97,7 +97,23 @@ public class Citizen {
         this.hashPassword = hashPassword;
     }
 
-    private String email,contactNo,province,district,address1,address2,firstName,lastName,nic,birthday,gender,hashPassword;
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getImgurl() {
+        return imgurl;
+    }
+
+    public void setImgurl(String imgurl) {
+        this.imgurl = imgurl;
+    }
+
+    private String email,contactNo,province,district,address1,address2,firstName,lastName,nic,birthday,gender,hashPassword,status,imgurl;
 
 
 }
