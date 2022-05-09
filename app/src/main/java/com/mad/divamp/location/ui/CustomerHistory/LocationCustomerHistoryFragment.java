@@ -3,6 +3,8 @@ import com.google.firebase.firestore.QueryDocumentSnapshot;
 import  com.mad.divamp.location.models.historyCardItem;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -31,6 +33,8 @@ import java.text.SimpleDateFormat;
 import es.dmoral.toasty.Toasty;
 
 public class LocationCustomerHistoryFragment extends Fragment {
+    SharedPreferences sharedpreferences;
+    String getEmail;
 
     private LocationCustomerHistoryFragmentBinding binding;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
@@ -45,7 +49,10 @@ public class LocationCustomerHistoryFragment extends Fragment {
         binding = LocationCustomerHistoryFragmentBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        RenderRecyclerView(binding.historyRecyclerView,"shavidilunika10s@gmail.com");
+        sharedpreferences =getActivity().getSharedPreferences("session", Context.MODE_PRIVATE);
+        getEmail = sharedpreferences.getString("email","");
+
+        RenderRecyclerView(binding.historyRecyclerView,getEmail);
         return root;
     }
 

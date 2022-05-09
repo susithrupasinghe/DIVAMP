@@ -10,12 +10,17 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
+import com.anton46.stepsview.StepsView;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.mad.divamp.R;
+import com.mad.divamp.citizen.userManagement.Register1Activity;
 import com.mad.divamp.utils.SHA256;
 
 import java.util.regex.Pattern;
+
+import es.dmoral.toasty.Toasty;
 
 public class Registration1Activity extends AppCompatActivity {
 
@@ -29,6 +34,7 @@ public class Registration1Activity extends AppCompatActivity {
     Spinner categoryId;
     String strLocation_name,strCategory,strAddress_1,strAddress_2,strPassword,strPasswordReEnter,hashPassword;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
+    private StepsView stepsView;
     EditText location_name,Address_1,Address_2,password,passwordReEnter;
     Button btn;
     Button btnPassBundles;
@@ -39,6 +45,7 @@ public class Registration1Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.location_activity_registration1);
 
+        stepsView = findViewById(R.id.stepsViewLocation);
         location_name = findViewById(R.id.location_name);
         categoryId = findViewById(R.id.category);
         Address_1 = findViewById(R.id.Address_1);
@@ -47,6 +54,13 @@ public class Registration1Activity extends AppCompatActivity {
         passwordReEnter = findViewById(R.id.passwordReEnter);
         btnPassBundles = findViewById(R.id.reg_next_btn);
 
+        stepsView
+                .setLabels(new String[] {"Location Details", "Contact Details", "Finish"})
+                .setBarColorIndicator(stepsView.getContext().getResources().getColor(R.color.inactive))
+                .setProgressColorIndicator(stepsView.getContext().getResources().getColor(R.color.light_green))
+                .setLabelColorIndicator(stepsView.getContext().getResources().getColor(R.color.inactive))
+                .setCompletedPosition(0)
+                .drawView();
 
         String[] category = getResources().getStringArray(R.array.category);
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item,category);
@@ -64,6 +78,8 @@ public class Registration1Activity extends AppCompatActivity {
                 strPassword = password.getText().toString();
                 strPasswordReEnter = passwordReEnter.getText().toString();
 
+
+
                 hashPassword = SHA256.getHash(strPassword);
 
                 // validating the text fields if empty or not.
@@ -75,6 +91,9 @@ public class Registration1Activity extends AppCompatActivity {
                     password.setError("Please enter Password");
                 }else if (!PASSWORD_PATTERN.matcher(strPassword).matches()) {
                    password.setError("Password is too weak");
+               }else if (strCategory.equals("Category")) {
+                   //error for spinner
+                   Toasty.success(Registration1Activity.this, "Please select Category", Toast.LENGTH_SHORT).show();
                }else if(!strPassword.equals(strPasswordReEnter)){
                     passwordReEnter.setError("Password and Confirm Password do not match");
                 }

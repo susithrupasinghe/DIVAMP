@@ -57,7 +57,7 @@ public class HomeFragment extends Fragment {
 
 
         sharedpreferences =getActivity().getSharedPreferences("session", Context.MODE_PRIVATE);
-        getEmail = sharedpreferences.getString("email","shavidilunika10s@gmail.com");
+        getEmail = sharedpreferences.getString("email","");
         RenderUserDetails(getEmail);
         markInfection = binding.Locationmarkasinfected;
 //        final TextView textView = binding.textGallery;
@@ -94,7 +94,7 @@ public class HomeFragment extends Fragment {
 
     private void RenderUserDetails(String getEmail){
 
-        db.collection("locatiob")
+        db.collection("location")
                 .whereEqualTo("email", getEmail)
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
@@ -111,13 +111,13 @@ public class HomeFragment extends Fragment {
                             for (QueryDocumentSnapshot document : task.getResult()) {
                                 try{
                                     binding.locName.setText(document.get("location_name").toString() + " ");
-                                    binding.ownerNIC.setText(document.get("NIC").toString());
+                                    binding.ownerNIC.setText(document.get("nic").toString());
                                     Glide.with(getActivity()).load(document.get("image").toString()).into(binding.profileimgInfected);
 
-
-                                    binding.ownerName.setText(document.get("fullName").toString());
+                                    binding.ownerName.setText("Owner Name : " +document.get("fullName").toString());
                                     binding.Address1.setText("Address : " + document.get("address_1").toString());
-                                    binding.Address2.setText(document.get("address_2").toString());
+                                    binding.phoneNumber.setText("Contact Number : " +document.get("contactNo").toString());
+                                    binding.email.setText("E-mail : " +document.get("email").toString());
                                     globalrefId = document.getId().toString();
                                     binding.secondRow.setVisibility(View.VISIBLE);
                                     binding.thirdrow.setVisibility(View.VISIBLE);
