@@ -3,14 +3,6 @@ package com.mad.divamp.center.models;
 public class vaccinecard {
 
 
-    public String getNIC() {
-        return NIC;
-    }
-
-    public void setNIC(String NIC) {
-        this.NIC = NIC;
-    }
-
     public String getCenter() {
         return Center;
     }
@@ -56,7 +48,6 @@ public class vaccinecard {
     private String BatchId;
     private String logoUrl;
     private String Date;
-    private String NIC;
     private String Center;
 
 }
