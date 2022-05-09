@@ -96,10 +96,10 @@
         android:background="@drawable/ic_registration_text"
         android:ems="10"
         android:fontFamily="@font/abhaya_libre_extrabold"
-        android:inputType="number"
+        android:hint="@string/citizen_reg_nic"
+        android:inputType="text"
         android:minHeight="48dp"
         android:paddingLeft="30dp"
-        android:hint="@string/citizen_reg_nic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lastName" />

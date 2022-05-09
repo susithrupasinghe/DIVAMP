@@ -18,6 +18,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.mad.divamp.R;
+import com.mad.divamp.citizen.CitizenMainActivity;
 import com.mad.divamp.location.LocationMainActivity;
 import com.mad.divamp.location.logIn.LogIn1Activity;
 import com.mad.divamp.location.registration.Registration1Activity;
@@ -111,7 +112,7 @@ public class LoginActivity extends AppCompatActivity {
 
                             for (QueryDocumentSnapshot document : task.getResult()) {
 
-                                if(document.get("password").toString().equals(SHA256.getHash(password))){
+                                if(document.get("hashPassword").toString().equals(SHA256.getHash(password))){
                                     Toasty.success(getApplicationContext(), "Success!", Toast.LENGTH_SHORT, true).show();
                                     SharedPreferences.Editor editor = sharedpreferences.edit();
 
@@ -119,7 +120,7 @@ public class LoginActivity extends AppCompatActivity {
                                     editor.putBoolean("loggedin", true);
                                     editor.commit();
                                     editor.apply();
-                                    Intent myintent = new Intent(getApplicationContext(), LocationMainActivity.class);
+                                    Intent myintent = new Intent(getApplicationContext(), CitizenMainActivity.class);
                                     startActivity(myintent);
                                     break;
                                 }

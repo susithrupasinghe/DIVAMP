@@ -41,6 +41,8 @@ public class StatusFragment extends Fragment {
         binding = CitizenStatusFragmentBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
+        updateStatus("dwqd","idqw");
+
 //        final TextView textView = binding.textHome;
 //        homeViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
         return root;
@@ -53,7 +55,6 @@ public class StatusFragment extends Fragment {
     }
 
     private  void updateStatus(String nic,String status){
-
         db.collection("citizen")
                 .whereEqualTo("nic",nic)
                 .get()
@@ -71,11 +72,9 @@ public class StatusFragment extends Fragment {
                         }
                         else{
                             Toasty.error(getActivity(), " Data retrieval failed", Toast.LENGTH_SHORT, true).show();
-
                         }
                     }
                 });
-
         try {
             db.collection("citizen").document(globalRefId).update("status",status);
             Toasty.success(getActivity(), "Status updated successfully", Toast.LENGTH_SHORT, true).show();

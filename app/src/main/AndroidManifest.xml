@@ -67,10 +67,7 @@
             android:name=".center.CenterMainActivity"
             android:exported="true"
             android:label="@string/title_activity_center_main"
-            android:theme="@style/Theme.Divamp.NoActionBar" >
-
-
-        </activity>
+            android:theme="@style/Theme.Divamp.NoActionBar" ></activity>
         <activity
             android:name=".admin.AdminMainActivity"
             android:exported="true"
