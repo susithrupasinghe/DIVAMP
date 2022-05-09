@@ -208,6 +208,8 @@ public class Register2Activity extends AppCompatActivity {
         citizen.setBirthday(birthday);
         citizen.setGender(gender);
         citizen.setHashPassword(hashPassword);
+        citizen.setImgurl("https://i.pravatar.cc/150?u=a042581f4e29026704d");
+        citizen.setStatus("Healthy");
 
 
         dbCitizen.add(citizen).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {

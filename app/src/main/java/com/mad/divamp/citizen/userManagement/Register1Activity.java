@@ -58,6 +58,8 @@ public class Register1Activity extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         genderSp.setAdapter(adapter);
 
+
+
         nextBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){

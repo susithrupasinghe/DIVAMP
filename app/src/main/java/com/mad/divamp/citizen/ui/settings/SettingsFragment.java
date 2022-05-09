@@ -27,7 +27,6 @@ import com.google.firebase.firestore.QuerySnapshot;
 import com.mad.divamp.R;
 import com.mad.divamp.citizen.ui.qrcode.QrCodeViewModel;
 import com.mad.divamp.citizen.userManagement.LoginActivity;
-import com.mad.divamp.databinding.CitizenQrCodeFragmentBinding;
 import com.mad.divamp.databinding.CitizenSettingsFragmentBinding;
 import com.mad.divamp.location.logIn.LogIn1Activity;
 import com.mad.divamp.location.registration.Registration1Activity;
@@ -64,7 +63,7 @@ public class SettingsFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                Delete(getNic);
+                Delete();
 
             }
         });
@@ -88,12 +87,12 @@ public class SettingsFragment extends Fragment {
         binding = null;
     }
 
-    private  void Delete(String email){
+    private  void Delete(){
 
         try {
-            db.collection("location").document(globalrefId).delete();
-            Toasty.success(getActivity(), "Location Delete Successfully", Toast.LENGTH_SHORT, true).show();
-            Intent intent = new Intent(getActivity(), Registration1Activity.class);
+            db.collection("citizen").document(globalrefId).delete();
+            Toasty.success(getActivity(), "Account Deleted Successfully", Toast.LENGTH_SHORT, true).show();
+            Intent intent = new Intent(getActivity(), LoginActivity.class);
             startActivity(intent);
         }
         catch (Exception ex){
@@ -102,7 +101,13 @@ public class SettingsFragment extends Fragment {
     }
 
     private void logOut(){
-        getNic = sharedpreferences.getString("","");
+
+        SharedPreferences.Editor editor = sharedpreferences.edit();
+
+        editor.putString("nic", "");
+        editor.putBoolean("loggedin", false);
+        editor.commit();
+        editor.apply();
         Toasty.success(getActivity(), "Success", Toast.LENGTH_SHORT, true).show();
         Intent intent = new Intent(getActivity(), LoginActivity.class);
         startActivity(intent);
