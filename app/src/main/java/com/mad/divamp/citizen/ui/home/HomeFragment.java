@@ -1,15 +1,15 @@
 package com.mad.divamp.citizen.ui.home;
 
+import androidx.annotation.RequiresApi;
 import androidx.lifecycle.ViewModelProvider;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -18,18 +18,22 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
-import com.mad.divamp.R;
-import com.mad.divamp.admin.RecyclerViewAdapter;
-import com.mad.divamp.admin.models.cardItem;
-import com.mad.divamp.citizen.ui.home.HomeViewModel;
+import com.mad.divamp.citizen.recyclerviews.VaccineRecyclerViewAdapter;
+import com.mad.divamp.citizen.models.VaccineCardItem;
 import com.mad.divamp.databinding.CitizenHomeFragmentBinding;
 
 import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.Period;
+import java.util.Calendar;
+import java.util.Date;
 
 import es.dmoral.toasty.Toasty;
 
@@ -41,6 +45,7 @@ public class HomeFragment extends Fragment {
     private CitizenHomeFragmentBinding binding;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     SharedPreferences sharedPreferences;
+    String nic;
 
 
 
@@ -53,8 +58,12 @@ public class HomeFragment extends Fragment {
 
         binding = CitizenHomeFragmentBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
-        RenderRecyclerView(binding.citizenVaccineRecycler, "20013400692");
-        sharedPreferences = this.getActivity().getSharedPreferences("session", Context.MODE_PRIVATE);
+        sharedPreferences =getActivity().getSharedPreferences("session", Context.MODE_PRIVATE);
+        nic = sharedPreferences.getString("nic","");
+
+        GetPatientDetails(nic);
+        RenderRecyclerView(binding.citizenVaccineListRecyclerView, nic);
+
 
 
 //        final TextView textView = binding.textHome;
@@ -68,34 +77,43 @@ public class HomeFragment extends Fragment {
         binding = null;
     }
 
+
     private void RenderRecyclerView(RecyclerView recyclerView, String NIC){
-        db.collection("vaccines")
-                .whereEqualTo("NIC", NIC)
+
+
+        db.collection("vaccine")
+                .whereEqualTo("nic", NIC)
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         if (task.isSuccessful()) {
-                            if(task.getResult().size() == 0){
-                                Toasty.error(getActivity(), " Data size 0", Toast.LENGTH_SHORT, true).show();
-                            }
-                            cardItem[] myCardList = new cardItem[task.getResult().size()];
+
+
+                            VaccineCardItem[] myCardList = new VaccineCardItem[task.getResult().size()];
                             int i=0;
                             for (QueryDocumentSnapshot document : task.getResult()) {
-                                cardItem Card = new cardItem();
-                                Card.setImgUrl(document.get("VaccineImg").toString());
-                                Card.setTitle(document.get("BatchId").toString());
-                                Card.setRow1(document.get("Center").toString());
-                                Card.setRow1(document.get("timestamp").toString());
+
+
+                                VaccineCardItem Card = new VaccineCardItem();
+
+                                Card.setDocumentId(document.getId());
+                                Card.setBatchId(document.get("batchID").toString());
+                                Card.setLogoUrl(document.get("imgUrl").toString());
+                                Card.setCenter(document.get("centerName").toString());
+                                Card.setDate(document.get("date").toString());
+
                                 myCardList[i] = Card;
                                 i++;
+
                             }
-                            RecyclerViewAdapter adapter = new RecyclerViewAdapter(myCardList);
+                            VaccineRecyclerViewAdapter adapter = new VaccineRecyclerViewAdapter(myCardList);
                             recyclerView.setHasFixedSize(true);
                             recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
                             recyclerView.setAdapter(adapter);
-                            Toasty.error(getActivity(), " added to recycler view", Toast.LENGTH_SHORT, true).show();
+
                         } else {
+
                             Toasty.error(getActivity(), " Data retrieval failed", Toast.LENGTH_SHORT, true).show();
                         }
                     }
@@ -103,4 +121,60 @@ public class HomeFragment extends Fragment {
 
 
     }
+    private void GetPatientDetails(String nic){
+
+        db.collection("citizen")
+                .whereEqualTo("nic", nic)
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @RequiresApi(api = Build.VERSION_CODES.O)
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+
+                            if(task.getResult().size() == 0){
+
+                                Toasty.error(getActivity(), "Please input correct NIC", Toast.LENGTH_SHORT, true).show();
+                            }
+
+                            for (QueryDocumentSnapshot document : task.getResult()) {
+                                try{
+                                    binding.citizenUserName.setText(document.get("firstName").toString() + " " + document.get("lastName").toString());
+                                    binding.citizenUserNic.setText(document.get("nic").toString());
+                                    Glide.with(getActivity()).load(document.get("imgurl").toString()).into(binding.citizenProfileImage);
+                                    SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/YYYY");
+                                    Date d = sdf.parse(document.get("birthday").toString());
+                                    Calendar c = Calendar.getInstance();
+                                    c.setTime(d);
+                                    int year = c.get(Calendar.YEAR);
+                                    int month = c.get(Calendar.MONTH) + 1;
+                                    int date = c.get(Calendar.DATE);
+                                    LocalDate l1 = LocalDate.of(year, month, date);
+                                    LocalDate now1 = LocalDate.now();
+                                    Period diff1 = Period.between(l1, now1);
+
+                                    binding.citizenUserAge.setText("Age : " + diff1.getYears());
+                                    binding.citizenUserStatus.setText("Current Status : " + document.get("status").toString());
+                                    break;
+                                }
+                                catch (Exception Ex){
+                                    Toasty.error(getActivity(), Ex.getMessage(), Toast.LENGTH_LONG, true).show();
+                                }
+
+                            }
+
+                        } else {
+
+                            Toasty.error(getActivity(), " Data retrieval failed", Toast.LENGTH_SHORT, true).show();
+                        }
+                    }
+                });
+
+
+    }
+
+
+
+
+
 }

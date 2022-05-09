@@ -1,11 +1,159 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ic_citizen_status_background"
-    tools:context=".citizen.ui.status.StatusFragment">
+    android:background="@drawable/ic_citizen_home_background"
+    tools:context=".citizen.ui.status.StatusFragment" >
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/citizenStatus"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
 
-</FrameLayout>
+            <Button
+                android:id="@+id/statusbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/citizen_status_mark_infected"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/citizentopCard3Status" />
+
+            <LinearLayout
+                android:id="@+id/citizentopCard3Status"
+                android:layout_width="344dp"
+                android:layout_height="190dp"
+                android:background="@drawable/cardview_background"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.492"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.086">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/citizensecondRow3Status"
+                    android:layout_width="match_parent"
+                    android:layout_height="67dp"
+                    android:layout_marginTop="20dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/citizen_profile_imageStatus"
+                        android:layout_width="114dp"
+                        android:layout_height="66dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:src="@tools:sample/avatars" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="229dp"
+                        android:layout_height="61dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/citizen_profile_imageStatus"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/citizen_user_nameStatus"
+                                android:layout_width="match_parent"
+                                android:layout_height="34dp"
+                                android:gravity="center|left"
+                                android:text="TextView"
+                                android:textColor="#000000"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                tools:text="Susith Rupasinghe" />
+
+                            <TextView
+                                android:id="@+id/citizen_user_nicStatus"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="200013400692"
+                                android:textColor="#020202"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/citizenthirdrow3Status"
+                    android:layout_width="match_parent"
+                    android:layout_height="111dp">
+
+                    <TextView
+                        android:id="@+id/citizen_user_ageStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:gravity="center|left"
+                        android:text="Age :  None"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.195"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/citizen_last_vaccinated_date_infStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:gravity="center|left"
+                        android:text="Last Vaccinated Date : None"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/citizen_user_ageStatus"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/citizen_user_statusStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="64dp"
+                        android:gravity="center|left"
+                        android:text="Current Status : None"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="@+id/citizen_last_vaccinated_date_infStatus"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/citizen_vaccine_list_recycler_viewStatus"
+                android:layout_width="408dp"
+                android:layout_height="386dp"
+                android:layout_marginTop="64dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/statusbutton"
+                app:layout_constraintVertical_bias="0.0" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
