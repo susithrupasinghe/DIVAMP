@@ -65,13 +65,13 @@ public class centerListRecyclerViewAdapter extends RecyclerView.Adapter<centerLi
                             @Override
                             public void onSuccess(Void aVoid) {
 
-                                Toasty.success(view.getContext(), "Vaccine delete successful", Toast.LENGTH_SHORT, true).show();
+                                Toasty.success(view.getContext(), "Vaccine center delete process successful", Toast.LENGTH_SHORT, true).show();
 
                             }
                         }).addOnFailureListener(new OnFailureListener() {
                             @Override
                             public void onFailure(@NonNull Exception e) {
-                                Toasty.error(view.getContext(), "Vaccine delete failed", Toast.LENGTH_SHORT, true).show();
+                                Toasty.error(view.getContext(), "Vaccine center delete process failed", Toast.LENGTH_SHORT, true).show();
                             }
                         });
 
