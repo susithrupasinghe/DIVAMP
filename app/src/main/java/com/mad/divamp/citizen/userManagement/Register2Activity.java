@@ -154,7 +154,7 @@ public class Register2Activity extends AppCompatActivity {
                 address1 = address1Et.getText().toString();
                 address2 = address2Et.getText().toString();
                 province = provinceSp.getSelectedItem().toString();
-                district = "Colombo";//districtSp.getSelectedItem().toString()//
+                district = districtSp.getSelectedItem().toString();
                 String Expn =
                         "^(([\\w-]+\\.)+[\\w-]+|([a-zA-Z]{1}|[\\w-]{2,}))@"
                                 +"((([0-1]?[0-9]{1,2}|25[0-5]|2[0-4][0-9])\\.([0-1]?"
@@ -195,8 +195,20 @@ public class Register2Activity extends AppCompatActivity {
                          ){
         CollectionReference dbCitizen = db.collection("citizen");
         //create a citizen object
-        Citizen citizen = new Citizen(email,contactNo,province,district,address1,address2,firstName,lastName,nic,birthday,
-                                        gender,hashPassword);
+        Citizen citizen = new Citizen();
+        citizen.setEmail(email);
+        citizen.setContactNo(contactNo);
+        citizen.setProvince(province);
+        citizen.setDistrict(district);
+        citizen.setAddress1(address1);
+        citizen.setAddress2(address2);
+        citizen.setFirstName(firstName);
+        citizen.setLastName(lastName);
+        citizen.setNic(nic);
+        citizen.setBirthday(birthday);
+        citizen.setGender(gender);
+        citizen.setHashPassword(hashPassword);
+
 
         dbCitizen.add(citizen).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
             @Override
