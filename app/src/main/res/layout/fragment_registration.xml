@@ -53,7 +53,7 @@
                 android:id="@+id/admin_reg_page_1_inputs"
                 android:layout_width="match_parent"
                 android:layout_height="380dp"
-                android:visibility="gone">
+                android:visibility="visible">
 
                 <EditText
                     android:id="@+id/admin_page_1_email"
@@ -100,7 +100,6 @@
                         android:layout_height="46dp"
                         android:layout_marginTop="16dp"
                         android:background="@drawable/ic_spinner_background"
-                        android:entries="@array/province"
                         android:paddingLeft="20dp"
                         android:spinnerMode="dialog" />
 
@@ -112,7 +111,6 @@
                         android:layout_marginTop="16dp"
                         android:layout_marginRight="10dp"
                         android:background="@drawable/ic_spinner_background"
-                        android:entries="@array/district"
                         android:paddingLeft="20dp"
                         android:spinnerMode="dialog" />
 
@@ -173,7 +171,7 @@
                 android:id="@+id/admin_reg_page_2_inputs"
                 android:layout_width="match_parent"
                 android:layout_height="386dp"
-                android:visibility="visible">
+                android:visibility="gone">
 
                 <EditText
                     android:id="@+id/admin_page_2_NIC"
@@ -235,7 +233,7 @@
                 android:id="@+id/admin_reg_page_2_buttonset"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:visibility="visible">
+                android:visibility="gone">
 
                 <Button
                     android:id="@+id/admin_reg_next_btn_2"

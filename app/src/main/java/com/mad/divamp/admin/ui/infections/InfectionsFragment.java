@@ -18,6 +18,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.cardview.widget.CardView;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -58,7 +59,7 @@ public class InfectionsFragment extends Fragment {
     TextView NIC;
     ImageButton search;
     Button markInfection;
-
+    ConstraintLayout layout_bottom, recyclerviewConstraintLayout, searchThumbnail;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
@@ -71,13 +72,16 @@ public class InfectionsFragment extends Fragment {
         NIC = binding.nicSearch;
         search = binding.searchbtn;
         markInfection = binding.markasinfected;
+        layout_bottom = binding.infectionPendingConstraintBottom;
+        recyclerviewConstraintLayout = binding.infectedRecyclerViewBottom;
+        searchThumbnail = binding.adminSearchThumbnail;
         binding.secondRow.setVisibility(View.INVISIBLE);
         binding.thirdrow.setVisibility(View.INVISIBLE);
         binding.markasinfected.setVisibility(View.INVISIBLE);
 
 
 
-
+        makeLoading(true);
         search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -106,6 +110,24 @@ public class InfectionsFragment extends Fragment {
         binding = null;
     }
 
+    private void makeLoading(boolean status){
+        if(status)
+        {
+            layout_bottom.setVisibility(View.VISIBLE);
+            binding.secondRow.setVisibility(View.GONE);
+            binding.thirdrow.setVisibility(View.GONE);
+            searchThumbnail.setVisibility(View.VISIBLE);
+            recyclerviewConstraintLayout.setVisibility(View.GONE);
+        }
+        else {
+            binding.secondRow.setVisibility(View.VISIBLE);
+            binding.thirdrow.setVisibility(View.VISIBLE);
+            searchThumbnail.setVisibility(View.GONE);
+            layout_bottom.setVisibility(View.VISIBLE);
+            recyclerviewConstraintLayout.setVisibility(View.VISIBLE);
+        }
+
+    }
     private  void UpdateInfectedUser(String NIC){
 
         try {
@@ -136,12 +158,12 @@ public class InfectionsFragment extends Fragment {
 
                             for (QueryDocumentSnapshot document : task.getResult()) {
                                 try{
-                                    binding.infectionUserName.setText(document.get("firstname").toString() + " " + document.get("lastname").toString());
+                                    binding.infectionUserName.setText(document.get("firstName").toString() + " " + document.get("lastName").toString());
                                     binding.infectionUserNic.setText(document.get("nic").toString());
                                     Glide.with(getActivity()).load(document.get("imgurl").toString()).into(binding.profileimgInfected);
 
                                     SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/YYYY");
-                                    Date d = sdf.parse(document.get("dob").toString());
+                                    Date d = sdf.parse(document.get("birthday").toString());
                                     Calendar c = Calendar.getInstance();
                                     c.setTime(d);
                                     int year = c.get(Calendar.YEAR);
@@ -157,6 +179,8 @@ public class InfectionsFragment extends Fragment {
                                     binding.secondRow.setVisibility(View.VISIBLE);
                                     binding.thirdrow.setVisibility(View.VISIBLE);
                                     binding.markasinfected.setVisibility(View.VISIBLE);
+
+                                    makeLoading(false);
                                     break;
                                 }
                                 catch (Exception Ex){
