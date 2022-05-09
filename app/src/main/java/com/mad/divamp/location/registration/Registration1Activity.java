@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.anton46.stepsview.StepsView;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.mad.divamp.R;
 import com.mad.divamp.citizen.userManagement.Register1Activity;
@@ -33,6 +34,7 @@ public class Registration1Activity extends AppCompatActivity {
     Spinner categoryId;
     String strLocation_name,strCategory,strAddress_1,strAddress_2,strPassword,strPasswordReEnter,hashPassword;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
+    private StepsView stepsView;
     EditText location_name,Address_1,Address_2,password,passwordReEnter;
     Button btn;
     Button btnPassBundles;
@@ -43,6 +45,7 @@ public class Registration1Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.location_activity_registration1);
 
+        stepsView = findViewById(R.id.stepsViewLocation);
         location_name = findViewById(R.id.location_name);
         categoryId = findViewById(R.id.category);
         Address_1 = findViewById(R.id.Address_1);
@@ -51,6 +54,13 @@ public class Registration1Activity extends AppCompatActivity {
         passwordReEnter = findViewById(R.id.passwordReEnter);
         btnPassBundles = findViewById(R.id.reg_next_btn);
 
+        stepsView
+                .setLabels(new String[] {"Location Details", "Contact Details", "Finish"})
+                .setBarColorIndicator(stepsView.getContext().getResources().getColor(R.color.inactive))
+                .setProgressColorIndicator(stepsView.getContext().getResources().getColor(R.color.light_green))
+                .setLabelColorIndicator(stepsView.getContext().getResources().getColor(R.color.inactive))
+                .setCompletedPosition(0)
+                .drawView();
 
         String[] category = getResources().getStringArray(R.array.category);
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item,category);
@@ -67,6 +77,8 @@ public class Registration1Activity extends AppCompatActivity {
                 strAddress_2 = Address_2.getText().toString();
                 strPassword = password.getText().toString();
                 strPasswordReEnter = passwordReEnter.getText().toString();
+
+
 
                 hashPassword = SHA256.getHash(strPassword);
 

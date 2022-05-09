@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.anton46.stepsview.StepsView;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.CollectionReference;
@@ -26,7 +27,7 @@ public class Registration2Activity extends AppCompatActivity {
 
     String NIC,fullName,contactNo,email,image,status;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
-
+    private StepsView stepsView;
     Spinner categoryId;
     EditText emailEtd,location_name,NICEtd,fullNameEtd,contactNoEtd,Address_1,Address_2,password;
     Button btnFinish;
@@ -35,20 +36,27 @@ public class Registration2Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         getSupportActionBar().hide();
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.location_activity_registration2);
 
+        setContentView(R.layout.location_activity_registration2);
+        stepsView = findViewById(R.id.stepsViewLocation2);
         location_name = findViewById(R.id.location_name);
         categoryId = findViewById(R.id.category);
         Address_1 = findViewById(R.id.Address_1);
         Address_2 = findViewById(R.id.Address_2);
         password = findViewById(R.id.password);
-
         NICEtd = (EditText)findViewById(R.id.NIC);
         fullNameEtd = (EditText)findViewById(R.id.fullName);
         contactNoEtd = (EditText)findViewById(R.id.contactNumber);
         emailEtd = (EditText)findViewById(R.id.RegEmail);
-
         btnFinish = (Button) findViewById(R.id.finish_btn);
+
+        stepsView
+                .setLabels(new String[] {"Location Details", "Contact Details", "Finish"})
+                .setBarColorIndicator(stepsView.getContext().getResources().getColor(R.color.inactive))
+                .setProgressColorIndicator(stepsView.getContext().getResources().getColor(R.color.light_green))
+                .setLabelColorIndicator(stepsView.getContext().getResources().getColor(R.color.inactive))
+                .setCompletedPosition(1)
+                .drawView();
 
         Intent intent = getIntent();
 //        String email = intent.getStringExtra("email");
