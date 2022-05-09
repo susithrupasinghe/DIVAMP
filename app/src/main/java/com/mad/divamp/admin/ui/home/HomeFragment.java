@@ -48,7 +48,14 @@ public class HomeFragment extends Fragment {
         View root = binding.getRoot();
 
         calculateVaccineStatistics();
-       //susith
+        calculateInfectedCount();
+        calculateTotalCenterCount();
+
+        return root;
+    }
+
+    public  void  calculateTotalCenterCount(){
+
         db.collection("center")
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
@@ -64,10 +71,23 @@ public class HomeFragment extends Fragment {
                         }
                     }
                 });
-
-        return root;
     }
+    public  void calculateInfectedCount(){
 
+        db.collection("citizen").whereEqualTo("status", "Infected")
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+
+                            binding.totalInfectedCount.setText("Total Infected Count : " + String.valueOf(task.getResult().size()));
+
+                        }
+                    }
+                });
+
+    }
     public void calculateVaccineStatistics(){
 
         db.collection("vaccine")
