@@ -40,8 +40,9 @@
                         android:id="@+id/nicSearch"
                         android:layout_width="244dp"
                         android:layout_height="33dp"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
                         android:background="@drawable/ic_input"
                         android:ems="10"
                         android:hint="NIC"
@@ -70,7 +71,8 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/secondRow"
                     android:layout_width="match_parent"
-                    android:layout_height="67dp">
+                    android:layout_height="64dp"
+                    tools:visibility="gone">
 
                     <de.hdodenhof.circleimageview.CircleImageView
                         android:id="@+id/profileimg_infected"
@@ -119,7 +121,8 @@
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/thirdrow"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    tools:visibility="gone">
 
                     <TextView
                         android:id="@+id/infected_age"
@@ -172,13 +175,44 @@
                         app:layout_constraintTop_toBottomOf="@+id/user_status" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/adminSearchThumbnail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/imageView12"
+                        android:layout_width="173dp"
+                        android:layout_height="115dp"
+                        android:src="@drawable/ic_admin_infection_search_thumbnail_svg"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.153" />
+
+                    <TextView
+                        android:id="@+id/textView33"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Search Your NIC"
+                        android:textSize="24sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView12" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/infected_recyclerView_bottom"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_gravity="center">
+            android:layout_gravity="center"
+            tools:visibility="gone">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -202,6 +236,26 @@
                     android:layout_gravity="center" />
             </LinearLayout>
 
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/infection_pending_constraint_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="258dp"
+                android:layout_height="234dp"
+                android:src="@drawable/ic_admin_infection_pending2"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.712"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.289"
+                />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

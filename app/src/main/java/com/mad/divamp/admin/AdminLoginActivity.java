@@ -50,8 +50,16 @@ public class AdminLoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Login(emailtxt.getText().toString(), passwordtxt.getText().toString());
-                // do something when the corky2 is clicked
+                if(emailtxt.getText().toString().isEmpty()){
+                    emailtxt.setError("Please enter your email");
+                }
+                else if(passwordtxt.getText().toString().isEmpty()){
+                    passwordtxt.setError("Please enter your password");
+                }
+                else {
+                    Login(emailtxt.getText().toString(), passwordtxt.getText().toString());
+                }
+
             }
         });
 
