@@ -115,5 +115,4 @@ public class Citizen {
 
     private String email,contactNo,province,district,address1,address2,firstName,lastName,nic,birthday,gender,hashPassword,status,imgurl;
 
-
 }
